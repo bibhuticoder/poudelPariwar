@@ -107,7 +107,7 @@ export class FamilyTree extends React.Component<Props, State> {
                     </div>
 
                     <div className="relative overflow-x-auto">
-                        <div id="family-tree" ref={this.familyTreeRef} className={treeClass()} style={{
+                        <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} style={{
                             backgroundImage: `url(${oldPaperImage.src})`,
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
