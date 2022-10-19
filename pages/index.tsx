@@ -23,14 +23,14 @@ const Home: NextPage = () => {
             पौडेल परिवार
           </h1>
 
-          <p className='text-2xl mb-8 text-black font-Nunito'>
+          <p className='text-2xl mb-8 text-black'>
             <span className="text-3xl">
-              Welcome to Poudel family.
+              पौडेल परिवारमा स्वागत छ
             </span>
             <br />
             <br />
-            This page contains all the general information on Poudel family.&nbsp;
-            It aims to serve as reference to newer generations to know more about their family history,&nbsp;family members.
+            यस पृष्ठमा पौडेल परिवारको सम्पूर्ण सामान्य जानकारी समावेश छ ।&nbsp;
+            यसले नयाँ पुस्ताहरूलाई उनीहरूको पारिवारिक इतिहास र परिवारका सदस्यहरूको बारेमा थप जान्नको लागि सन्दर्भको रूपमा सेवा गर्ने लक्ष्य राख्छ ।
           </p>
         </main>
       </div>

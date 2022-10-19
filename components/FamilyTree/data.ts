@@ -9,7 +9,6 @@ const $ = (item: TreeItem) => {
     // CONTAINER START
     let html = `<div class="person-group ${item.spouse ? '--married' : '--unmarried'}">`;
 
-
     const buildPerson = (person: Person) => {
         let html = `<div class="person" id="${person.id}">`;
         if (_mode == FAMILY_TREE_MODE.MAX) {

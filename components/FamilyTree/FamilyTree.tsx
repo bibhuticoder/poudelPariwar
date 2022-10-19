@@ -1,10 +1,11 @@
-import React from "react";
-import domtoimage from "dom-to-image";
-import { saveAs } from 'file-saver';
-import { FAMILY_TREE_DATA } from "./data";
-import { FAMILY_TREE_MODE } from "../../enums";
+import React from "react"
+import domtoimage from "dom-to-image"
+import { saveAs } from 'file-saver'
+import { FAMILY_TREE_DATA } from "./data"
+import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
-import { BsCloudDownload } from 'react-icons/bs';
+import { BsCloudDownload } from 'react-icons/bs'
+import { FamilyTreeModal } from "./FamilyTreeModal"
 
 type Props = {
     mode: FAMILY_TREE_MODE;
@@ -93,7 +94,7 @@ export class FamilyTree extends React.Component<Props, State> {
         };
 
         return (
-            <section id="chronicles">
+            <section id="chronicles" className="relative">
                 <div className="mx-auto px-4">
                     <div className="toolbar flex justify-end">
                         <select onChange={this.handleModeChange} className="bg-gray-200 rounded-md px-3 py-2 m-2 outline-none">
@@ -116,7 +117,13 @@ export class FamilyTree extends React.Component<Props, State> {
                     </div>
                 </div>
 
-
+                <FamilyTreeModal
+                    show={false}
+                    person={{
+                        id: 'bibhuti-poudyal',
+                        name: 'विभूति पौडेल',
+                        image: 'nepali-0.png'
+                    }} />
             </section>
         );
     }
