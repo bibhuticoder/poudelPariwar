@@ -2,8 +2,9 @@ import { GENDER } from "../enums";
 
 export type Person = {
     id: string,
-    name: string,
+    name?: string,
     dob?: string,
+    age?: string,
     dod?: string | null,
     image?: string | null,
     gender?: GENDER,
@@ -11,7 +12,7 @@ export type Person = {
 }
 
 export type TreeItem = {
-    self: Person,
-    spouse?: Person
-    children?: Person[]
+    self: String,
+    spouse?: String
+    children?: String[]
 }

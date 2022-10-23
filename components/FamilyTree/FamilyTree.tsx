@@ -1,19 +1,21 @@
 import React from "react"
-import domtoimage from "dom-to-image"
-import { saveAs } from 'file-saver'
 import { FAMILY_TREE_DATA } from "./data"
 import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
 import { BsCloudDownload } from 'react-icons/bs'
 import { FamilyTreeModal } from "./FamilyTreeModal"
+import { DownloadModal } from "../DownloadModal/DownloadModal"
+import { Person } from "../../types"
 
 type Props = {
-    mode: FAMILY_TREE_MODE;
+    mode: FAMILY_TREE_MODE
+    activePerson: Person | null
 };
 
 type State = {
-    treant: any;
+    treant: any
     mode: FAMILY_TREE_MODE
+    showDownloadModal: Boolean
 };
 
 declare var Treant: any;
@@ -23,7 +25,11 @@ export class FamilyTree extends React.Component<Props, State> {
     private familyTreeRef;
     constructor(props: any) {
         super(props);
-        this.state = { treant: null, mode: this.props.mode };
+        this.state = {
+            treant: null,
+            mode: this.props.mode,
+            showDownloadModal: false
+        };
         this.familyTreeRef = React.createRef()
     }
 
@@ -62,6 +68,15 @@ export class FamilyTree extends React.Component<Props, State> {
                 nodeStructure: FAMILY_TREE_DATA(this.state.mode),
             });
             this.setState({ treant });
+
+            if (typeof window !== "undefined") {
+                window.document.querySelectorAll(".person").forEach(person => {
+                    person.addEventListener('click', (event) => {
+                        let id = person.getAttribute("id");
+                        window.document.dispatchEvent(new CustomEvent('show-person-detail', { detail: id }));
+                    })
+                })
+            }
         }
     }
 
@@ -70,19 +85,12 @@ export class FamilyTree extends React.Component<Props, State> {
         if (this.familyTreeRef.current) {
             this.setState({ treant: null });
             (this.familyTreeRef.current as HTMLElement).innerHTML = "";
-            setTimeout(() => this.initTreant(), 500);
+            setTimeout(() => this.initTreant(), 250);
         }
     }
 
-    download = () => {
-        let node = this.familyTreeRef.current as any;
-        domtoimage.toBlob(node, { width: node.scrollWidth, height: node.scrollHeight })
-            .then(function (blob: any) {
-                saveAs(blob, 'poudyal-pariwar-tree.png');
-            })
-            .catch(function (error: any) {
-                console.error('oops, something went wrong!', error);
-            });
+    handleDownloadClick = () => {
+        this.setState({ showDownloadModal: true });
     }
 
     render() {
@@ -102,7 +110,7 @@ export class FamilyTree extends React.Component<Props, State> {
                             <option value={FAMILY_TREE_MODE.MAX}>Max</option>
                         </select>
 
-                        <button onClick={this.download} className="bg-gray-200 rounded-md px-3 py-2 m-2" title="Download">
+                        <button onClick={this.handleDownloadClick} className="bg-gray-200 rounded-md px-3 py-2 m-2" title="Download">
                             <BsCloudDownload />
                         </button>
                     </div>
@@ -117,13 +125,9 @@ export class FamilyTree extends React.Component<Props, State> {
                     </div>
                 </div>
 
-                <FamilyTreeModal
-                    show={false}
-                    person={{
-                        id: 'bibhuti-poudyal',
-                        name: 'विभूति पौडेल',
-                        image: 'nepali-0.png'
-                    }} />
+                {this.props.activePerson && <FamilyTreeModal person={this.props.activePerson} />}
+
+                <DownloadModal loading={false} familyTreeRef={this.familyTreeRef.current} show={this.state.showDownloadModal} />
             </section>
         );
     }

@@ -1,11 +1,27 @@
+import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Script from 'next/script'
 import { FamilyTree } from '../components/FamilyTree/FamilyTree'
 import { FAMILY_TREE_MODE } from "../enums"
-import React from 'react';
+import { useRouter } from 'next/router'
+import { findPersonById } from '../components/FamilyTree/data-details'
+import { Person } from "../types"
 
 const Home: NextPage = () => {
+
+  const router = useRouter()
+
+  if (typeof window !== "undefined") {
+    window.document.addEventListener("show-person-detail", (data: any) => {
+      router.push('?id=' + data.detail);
+    });
+  }
+
+  let activePerson = null;
+  if (router.query.id)
+    activePerson = findPersonById("" + router.query.id)
+
   return (
     <div>
       <Head>
@@ -36,7 +52,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="px-0 md:px-8 mx-auto my-8">
-        <FamilyTree mode={FAMILY_TREE_MODE.MIN} />
+        <FamilyTree mode={FAMILY_TREE_MODE.MIN} activePerson={activePerson} />
       </div>
 
     </div>

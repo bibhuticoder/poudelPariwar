@@ -1,13 +1,18 @@
 import _ from "lodash";
 import { FAMILY_TREE_MODE, GENDER } from "../../enums";
 import { TreeItem, Person } from "../../types";
+import { findPersonById } from "./data-details";
 
-// transformer
+// transformer: Transforms TreeItem to Treant-format
 let _mode = FAMILY_TREE_MODE.MIN;
 const $ = (item: TreeItem) => {
 
+    let self: Person | null = findPersonById(item.self);
+    let spouse: Person | null = null;
+    if (item.spouse) spouse = findPersonById(item.spouse);
+
     // CONTAINER START
-    let html = `<div class="person-group ${item.spouse ? '--married' : '--unmarried'}">`;
+    let html = `<div class="person-group ${spouse ? '--married' : '--unmarried'}">`;
 
     const buildPerson = (person: Person) => {
         let html = `<div class="person" id="${person.id}">`;
@@ -21,8 +26,8 @@ const $ = (item: TreeItem) => {
     }
 
     // SELF + SPOUSE
-    if (item.self) html += buildPerson(item.self);
-    if (item.spouse) html += buildPerson(item.spouse);
+    if (self) html += buildPerson(self);
+    if (spouse) html += buildPerson(spouse);
 
     // CONTAINER END
     html += `</div>`;
@@ -32,195 +37,61 @@ const $ = (item: TreeItem) => {
 const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
     _mode = mode;
     return {
-
         innerHTML: $({
-            self: {
-                id: 'narahari-poudel',
-                name: "नरहरि पौडेल",
-                dob: "1990-4-23",
-                dod: null,
-                image: "nepali-male.png",
-                gender: GENDER.MALE,
-                bio: "He was a very good man.",
-            },
-
-            spouse: {
-                id: 'narhari-poudyal-wife',
-                name: "wife",
-                dob: "1990-4-23",
-                dod: null,
-                image: "nepali-female.png",
-                gender: GENDER.FEMALE,
-                bio: "He was a very good man.",
-            },
+            self: 'narahari-poudel',
+            spouse: 'narhari-poudel-wife'
         }),
 
         children: [
             {
-
                 innerHTML: $({
-                    self: {
-                        id: 'kalidas-poudyal',
-                        name: "कालीदास पौडेल",
-                        dob: "1990-4-23",
-                        dod: null,
-                        image: "nepali-male.png",
-                        gender: GENDER.MALE,
-                        bio: "He was a very good man.",
-                    },
-
-                    spouse: {
-                        id: 'kalidas-poudyal-wife',
-                        name: "Unknown",
-                        dob: "1990-4-23",
-                        dod: null,
-                        image: "nepali-female.png",
-                        gender: GENDER.FEMALE,
-                        bio: "He was a very good man.",
-                    },
+                    self: 'kalidas-poudel',
+                    spouse: 'kalidas-poudel-wife'
                 }),
 
                 children: [
                     {
                         innerHTML: $({
-                            self: {
-                                id: 'mokshyanath-poudyal',
-                                name: "मोक्ष्यानाथ पौडेल",
-                                dob: "1990-4-23",
-                                dod: null,
-                                image: "nepali-male.png",
-                                gender: GENDER.MALE,
-                                bio: "He was a very good man.",
-                            },
-                            spouse: {
-                                id: 'mokshyanath-poudyal-wife',
-                                name: "thuloaama पौडेल",
-                                dob: "1990-4-23",
-                                dod: null,
-                                image: "nepali-female.png",
-                                gender: GENDER.FEMALE,
-                                bio: "He was a very good man.",
-                            },
+                            self: 'mokshyanath-poudel',
+                            spouse: 'mokshyanath-poudel-wife'
                         }),
-
-                        children: [],
                     },
 
                     {
                         innerHTML: $({
-                            self: {
-                                id: 'govinda-prasad-poudyal',
-                                name: "गोविन्द प्रसाद पौडेल",
-                                dob: "1990-4-23",
-                                dod: null,
-                                image: "nepali-male.png",
-                                gender: GENDER.MALE,
-                                bio: "He was a very good man.",
-                            },
-                            spouse: {
-                                id: 'shiva-maya-poudyal',
-                                name: "शिवमाया पौडेल",
-                                dob: "1990-4-23",
-                                dod: null,
-                                image: "nepali-female.png",
-                                gender: GENDER.FEMALE,
-                                bio: "He was a very good man.",
-                            },
+                            self: 'govinda-prasad-poudel',
+                            spouse: 'shiva-maya-poudel'
                         }),
 
                         children: [
 
                             {
                                 innerHTML: $({
-                                    self: {
-                                        id: "ram-chandra-poudyal",
-                                        name: "रामचन्द्र पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-male.png",
-                                        gender: GENDER.MALE,
-                                        bio: "He was a very good man.",
-                                    },
-                                    spouse: {
-                                        id: "ganga-devi-poudyal",
-                                        name: "गंगादेवी पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-female.png",
-                                        gender: GENDER.FEMALE,
-                                        bio: "He was a very good man.",
-                                    },
+                                    self: "ram-chandra-poudel",
+                                    spouse: "ganga-devi-poudel"
                                 }),
                                 children: [
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "lava-poudyal",
-                                                name: "लभ पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "tara-poudyal",
-                                                name: "तारा पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "lava-poudel",
+                                            spouse: "tara-poudel"
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "santosh-poudyal",
-                                                        name: "सन्तोष पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "nirmala-phuyal",
-                                                        name: "निर्मला फुयाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "santosh-poudel",
+                                                    spouse: "nirmala-phuyal"
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "aarush-poudyal",
-                                                                name: "आरुष पौडेल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "aarush-poudel"
                                                         })
                                                     },
 
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "aayam-poudyal",
-                                                                name: "आयाम पौडेल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "aayam-poudel"
                                                         })
                                                     }
                                                 ]
@@ -228,37 +99,13 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "sanjaya-poudyal",
-                                                        name: "संजय पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "shraddha-phuyal",
-                                                        name: "श्रद्धा फुयाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "sanjaya-poudel",
+                                                    spouse: "shraddha-phuyal"
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "siwanshi-poudyal",
-                                                                name: "शिवान्शी पौडेल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.FEMALE,
-                                                                bio: "He was a very good man.",
-                                                            },
+                                                            self: "siwanshi-poudel"
                                                         })
                                                     }
                                                 ]
@@ -268,81 +115,29 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "gauri-wagle",
-                                                name: "गौरी वाग्ले",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "rupak-ko-dad",
-                                                name: "rupak ko dad",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "gauri-wagle",
+                                            spouse: "rupak-ko-dad"
                                         }),
                                         children: [
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "rupak-ko-didi",
-                                                        name: "रुपक ko didi",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                }),
-                                                children: []
+                                                    self: "rupak-ko-didi"
+                                                })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "rupa-wagle",
-                                                        name: "रुपा वाग्ले",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "vinaju",
-                                                        name: "Vinaju",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                }),
-                                                children: []
+                                                    self: "rupa-wagle",
+                                                    spouse: "vinaju"
+                                                })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "rupak-wagle",
-                                                        name: "रुपक वाग्ले",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "rupak-wagle"
 
-                                                }),
-                                                children: []
+                                                })
                                             }
                                         ]
                                     }
@@ -351,82 +146,25 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                             {
                                 innerHTML: $({
-                                    self: {
-                                        id: "lakshman-poudyal",
-                                        name: "लक्ष्मण पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-male.png",
-                                        gender: GENDER.MALE,
-                                        bio: "He was a very good man.",
-                                    },
-                                    spouse: {
-                                        id: "kanchhi-poudyal",
-                                        name: "कान्छी पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-female.png",
-                                        gender: GENDER.FEMALE,
-                                        bio: "He was a very good man.",
-                                    },
+                                    self: "lakshman-poudel",
+                                    spouse: "kanchhi-poudel"
                                 }),
                                 children: [
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "puskar-poudyal",
-                                                name: "पुष्कर पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "kamala-poudyal",
-                                                name: "कमला पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "puskar-poudel",
+                                            spouse: "kamala-poudel"
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "purusottam-poudyal",
-                                                        name: "पुरुसोत्तम पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "lila-poudyal",
-                                                        name: "लिला पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "purusottam-poudel",
+                                                    spouse: "lila-poudel"
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "priyal-poudyal",
-                                                                name: "प्रियल पौडेल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.FEMALE,
-                                                                bio: "He was a very good man.",
-                                                            },
-
+                                                            self: "priyal-poudel"
                                                         }),
                                                     }
                                                 ]
@@ -434,53 +172,19 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "jaya-poudyal",
-                                                        name: "जया पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "dipak-prasad-khanal",
-                                                        name: "दीपक प्रसाद खनाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "jaya-poudel",
+                                                    spouse: "dipak-prasad-khanal",
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "diwa-khanal",
-                                                                name: "दिवा खनाल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-female.png",
-                                                                gender: GENDER.FEMALE,
-                                                                bio: "He was a very good man.",
-                                                            },
-
+                                                            self: "diwa-khanal"
                                                         }),
                                                     },
 
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "parth-khanal",
-                                                                name: "पार्थ खनाल",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            },
-
+                                                            self: "parth-khanal"
                                                         }),
                                                     }
                                                 ]
@@ -488,100 +192,34 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "bijaya-poudyal",
-                                                        name: "बिजया पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "kumar-bhandari",
-                                                        name: "कुमार भण्डारी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "bijaya-poudel",
+                                                    spouse: "kumar-bhandari"
                                                 }),
-                                                children: []
                                             }
                                         ]
                                     },
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "rama-bhandari",
-                                                name: "रमा भण्डारी",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "dilli-ram-bhandari",
-                                                name: "दिल्ली राम भण्डारी ",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "rama-bhandari",
+                                            spouse: "dilli-ram-bhandari"
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "shobha-bhandari",
-                                                        name: "शोभा भण्डारी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                    spouse: {
-                                                        id: "pradeep-chalise",
-                                                        name: "प्रदीप चालिसे",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "shobha-bhandari",
+                                                    spouse: "pradeep-chalise"
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "shobha-son-1",
-                                                                name: "son-1",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "shobha-son-1"
                                                         })
                                                     },
 
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "shobha-son-2",
-                                                                name: "son-2",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "shobha-son-2"
                                                         })
                                                     }
                                                 ]
@@ -589,50 +227,15 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "prabha-bhandari",
-                                                        name: "प्रभा भण्डारी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                    spouse: {
-                                                        id: "anil-baral",
-                                                        name: "अनिल बराल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "prabha-bhandari",
+                                                    spouse: "anil-baral"
                                                 }),
-                                                children: []
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "prativa-bhandari",
-                                                        name: "प्रतिभा भण्डारी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                    spouse: {
-                                                        id: "bhinaju",
-                                                        name: "Vinaju ",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "prativa-bhandari",
+                                                    spouse: "prativa-bhandari-husband"
                                                 })
                                             },
                                         ]
@@ -640,75 +243,26 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "durga-dhakal",
-                                                name: "दुर्गा ढकाल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "vinaju-dhakal",
-                                                name: "vinaju ढकाल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "durga-dhakal",
+                                            spouse: "durga-dhakal-husband"
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "dipeen-dhakal",
-                                                        name: "दिपीन ढकाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                    spouse: {
-                                                        id: "shreya-dhakal",
-                                                        name: "श्रेया ढकाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "dipeen-dhakal",
+                                                    spouse: "shreya-dhakal",
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "son-1",
-                                                                name: "son-1",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "dipeen-shreeya-son-1"
                                                         }),
                                                     },
 
                                                     {
 
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "son-2",
-                                                                name: "son-2",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "dipeen-shreeya-son-2"
                                                         })
                                                     }
                                                 ]
@@ -716,53 +270,20 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "dileep-dhakal",
-                                                        name: "दिलीप ढकाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                    spouse: {
-                                                        id: "rashmi-dhakal",
-                                                        name: "रश्मि ढकाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "dileep-dhakal",
+                                                    spouse: "rashmi-dhakal"
                                                 }),
                                                 children: [
                                                     {
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "son-1",
-                                                                name: "son-1",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.MALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "dipeep-rashmi-son-1"
                                                         }),
                                                     },
 
                                                     {
 
                                                         innerHTML: $({
-                                                            self: {
-                                                                id: "daughter-2",
-                                                                name: "daughter-2",
-                                                                dob: "1990-4-23",
-                                                                dod: null,
-                                                                image: "nepali-male.png",
-                                                                gender: GENDER.FEMALE,
-                                                                bio: "He was a very good man.",
-                                                            }
+                                                            self: "dipeep-rashmi-son-2"
                                                         })
                                                     }
                                                 ]
@@ -772,52 +293,18 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "shankar-poudyal",
-                                                name: "शंकर पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "sabitri-poudyal",
-                                                name: "सावित्री पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "shankar-poudel",
+                                            spouse: "sabitri-poudel"
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "sabal-poudyal",
-                                                        name: "सबल पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
+                                                    self: "sabal-poudel"
                                                 })
                                             },
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "salina-poudyal",
-                                                        name: "सलिना पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
+                                                    self: "salina-poudel"
                                                 })
                                             }
                                         ]
@@ -825,65 +312,25 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "pravakar-poudyal",
-                                                name: "प्रभाकर पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "dhana-poudyal",
-                                                name: "धन पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "pravakar-poudel",
+                                            spouse: "dhana-poudel",
                                         }),
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "shraddha-poudyal",
-                                                        name: "श्रद्धा पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    }
+                                                    self: "shraddha-poudel"
                                                 })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "shreeya-poudyal",
-                                                        name: "श्रीया पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    }
+                                                    self: "shreeya-poudel"
                                                 })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "aditya-poudyal",
-                                                        name: "आदित्य पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    }
+                                                    self: "aditya-poudel"
                                                 })
                                             },
                                         ]
@@ -893,95 +340,29 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                             {
                                 innerHTML: $({
-                                    self: {
-                                        id: "damodar-poudyal",
-                                        name: "दामोदर प्रसाद पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-male.png",
-                                        gender: GENDER.MALE,
-                                        bio: "He was a very good man.",
-                                    },
-                                    spouse: {
-                                        id: "bhawani-poudyal",
-                                        name: "भवानी पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-female.png",
-                                        gender: GENDER.FEMALE,
-                                        bio: "He was a very good man.",
-                                    },
+                                    self: "damodar-poudel",
+                                    spouse: "bhawani-poudel"
                                 }),
                                 children: [
                                     {
 
                                         innerHTML: $({
-                                            self: {
-                                                id: "laxmi-bhattrai",
-                                                name: "लक्ष्मी भट्टराई",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "shardul-bhattrai",
-                                                name: "शार्दुल भट्टराई",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            }
+                                            self: "laxmi-bhattrai",
+                                            spouse: "shardul-bhattrai"
                                         }),
 
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "gaurav-bhattrai",
-                                                        name: "गौरव भट्टराई",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "nilam-shahi",
-                                                        name: "निलम शाही",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    }
-                                                    ,
-
+                                                    self: "gaurav-bhattrai",
+                                                    spouse: "nilam-shahi"
                                                 })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "saurav-bhattrai",
-                                                        name: "सौरब भट्टराई",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "manisha-silwal",
-                                                        name: "मनीषा सिलवाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "saurav-bhattrai",
+                                                    spouse: "manisha-silwal"
                                                 })
                                             }
                                         ],
@@ -989,66 +370,24 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "basu-dev-poudyal",
-                                                name: "बासु देव पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "binu-gautam-poudyal",
-                                                name: " बिनु पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "basu-dev-poudel",
+                                            spouse: "binu-gautam-poudel"
                                         }),
 
                                         children: [
                                             {
-
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "bibhuti-poudyal",
-                                                        name: "विभूति पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "biranchi-poudel",
+                                                    spouse: "pratima-luitel"
+                                                }),
 
-
-                                                })
                                             },
 
                                             {
-                                                innerHTML: $({
-                                                    self: {
-                                                        id: "biranchi-poudyal",
-                                                        name: " बिरन्ची पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "pratima-luitel",
-                                                        name: "प्रतिमा लुइँटेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                }),
 
+                                                innerHTML: $({
+                                                    self: "bibhuti-poudel"
+                                                })
                                             },
                                         ],
                                     },
@@ -1056,64 +395,21 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
                                     {
 
                                         innerHTML: $({
-                                            self: {
-                                                id: "binu-khanal",
-                                                name: "बिनु खनाल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "umesh-khanal",
-                                                name: "उमेश खनाल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            }
+                                            self: "binu-khanal",
+                                            spouse: "umesh-khanal"
                                         }),
 
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "subina-khanal",
-                                                        name: "सुबिना खनाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "sashi-raj-pandey",
-                                                        name: "सशी राज पाण्डे",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
+                                                    self: "subina-khanal",
+                                                    spouse: "sashi-raj-pandey"
                                                 })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "rubina-khanal",
-                                                        name: "रुबिना खनाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-
+                                                    self: "rubina-khanal"
                                                 })
                                             }
                                         ],
@@ -1121,138 +417,50 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "diwakar-poudyal",
-                                                name: "दिवाकर पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "bhawani-dawadi-poudyal",
-                                                name: "भवानी (दीपा) पौडेल",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.FEMALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "diwakar-poudel",
+                                            spouse: "bhawani-dawadi-poudel"
                                         }),
 
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "dikshya-poudyal",
-                                                        name: "दिक्ष्या पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-                                                    spouse: {
-                                                        id: "prawin-khanal",
-                                                        name: "प्रविन खनाल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
+                                                    self: "dikshya-poudel",
+                                                    spouse: "prawin-khanal"
                                                 }),
 
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "dristi-poudyal",
-                                                        name: "द्रिश्टी पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                }),
-
+                                                    self: "dristi-poudel"
+                                                })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "dikshyant-poudyal",
-                                                        name: "दिक्ष्यंत पौडेल",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-male.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                }),
-
+                                                    self: "dikshyant-poudel"
+                                                })
                                             },
                                         ],
                                     },
 
                                     {
                                         innerHTML: $({
-                                            self: {
-                                                id: "sarala-poudyal-subedi",
-                                                name: "सरला पौडेल सुवेदी",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-male.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
-                                            spouse: {
-                                                id: "chandra-subedi",
-                                                name: "चन्द्र सुवेदी",
-                                                dob: "1990-4-23",
-                                                dod: null,
-                                                image: "nepali-female.png",
-                                                gender: GENDER.MALE,
-                                                bio: "He was a very good man.",
-                                            },
+                                            self: "sarala-poudel-subedi",
+                                            spouse: "chandra-subedi"
                                         }),
 
                                         children: [
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "sarthak-subedi",
-                                                        name: "सार्थक सुवेदी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.MALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                }),
-
+                                                    self: "sarthak-subedi"
+                                                })
                                             },
 
                                             {
                                                 innerHTML: $({
-                                                    self: {
-                                                        id: "sara-subedi",
-                                                        name: "सारा सुवेदी",
-                                                        dob: "1990-4-23",
-                                                        dod: null,
-                                                        image: "nepali-female.png",
-                                                        gender: GENDER.FEMALE,
-                                                        bio: "He was a very good man.",
-                                                    },
-
-                                                }),
-
+                                                    self: "sara-subedi"
+                                                })
                                             },
                                         ],
                                     },
@@ -1261,18 +469,8 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
 
                             {
                                 innerHTML: $({
-                                    self: {
-                                        id: "narayan-poudyal",
-                                        name: "नारायण प्रसाद पौडेल",
-                                        dob: "1990-4-23",
-                                        dod: null,
-                                        image: "nepali-male.png",
-                                        gender: GENDER.MALE,
-                                        bio: "He was a very good man.",
-                                    },
-
-                                }),
-                                children: null
+                                    self: "narayan-poudel"
+                                })
                             }
                         ],
                     },
@@ -1280,7 +478,7 @@ const FAMILY_TREE_DATA = (mode = FAMILY_TREE_MODE.MIN) => {
             }
         ]
     }
-};
+}
 
 
 export { FAMILY_TREE_DATA };
