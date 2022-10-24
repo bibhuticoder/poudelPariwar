@@ -781,9 +781,9 @@ const DETAILS: Person[] = [
         dod: null,
         gender: GENDER.MALE,
         bio: `
-            <b> Academic </b> : Masters in Computer Science
+            <b> Academic </b>: Masters in Computer Science
             <br/>
-            <b> Profession </b> : CTO at TheValueCrew
+            <b> Profession </b>: CTO at TheValueCrew
             <br/>
             <b>Address </b>: Kathmandu, Nepal
             <br/>
@@ -795,12 +795,21 @@ const DETAILS: Person[] = [
 
     {
         id: "biranchi-poudel",
-        name: " बिरन्ची पौडेल",
-        dob: "1990-4-23",
+        name: "बिरन्ची पौडेल",
+        dob: "1994-10-06",
         dod: null,
-        image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: `
+        <b> Academics </b>: Masters in English Literature & International Relation
+        <br/>
+        <b> Profession </b>: Freelance Writer & Senior Researcher at Pioneer Research Center Nepal
+        <br/>
+        <b> Address </b>: Kathmandu, Nepal
+
+        <br/>
+        <br/>
+        I am a social science researcher and a writing entrepreneur with good publication profile in national and international platforms.
+        `,
     },
 
     {

@@ -38,7 +38,7 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                         width="120"
                         height="120"
                         alt="Picture of the author"
-                        className="rounded-full"
+                        className="rounded-full object-cover"
                     />
 
                     {/* Name */}
