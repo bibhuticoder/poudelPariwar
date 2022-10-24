@@ -37,7 +37,7 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                         src={`/images/${this.props.person.id}.jpg` || ''}
                         width="120"
                         height="120"
-                        alt="Picture of the author"
+                        alt="Please fill up the form to update details"
                         className="rounded-full object-cover"
                     />
 

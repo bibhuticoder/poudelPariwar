@@ -11,7 +11,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -21,7 +21,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -31,7 +31,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -41,7 +41,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -51,7 +51,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -61,7 +61,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -71,7 +71,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -81,7 +81,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -91,7 +91,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -101,7 +101,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -111,7 +111,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -121,7 +121,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -131,7 +131,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -141,7 +141,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -151,7 +151,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -161,7 +161,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -171,7 +171,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -181,7 +181,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -191,7 +191,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -201,7 +201,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -211,7 +211,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -221,7 +221,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -231,7 +231,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -241,7 +241,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -251,7 +251,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -261,7 +261,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -271,7 +271,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -281,7 +281,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -291,7 +291,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -301,7 +301,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -311,7 +311,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -321,7 +321,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -331,7 +331,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -341,7 +341,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -351,7 +351,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -361,7 +361,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -371,7 +371,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -381,7 +381,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -391,7 +391,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -401,7 +401,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -411,7 +411,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -421,7 +421,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -431,7 +431,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -441,7 +441,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -451,7 +451,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -461,7 +461,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -471,7 +471,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -481,7 +481,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -491,7 +491,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -501,7 +501,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -511,7 +511,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -521,7 +521,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -531,7 +531,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -541,7 +541,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -551,7 +551,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -561,7 +561,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -571,7 +571,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -581,7 +581,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -591,7 +591,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -601,7 +601,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -611,7 +611,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -621,7 +621,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -631,7 +631,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -641,7 +641,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -651,7 +651,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -661,7 +661,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -671,7 +671,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -681,7 +681,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -691,7 +691,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -701,7 +701,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -711,7 +711,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -721,7 +721,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -731,7 +731,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -741,7 +741,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -751,7 +751,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -761,7 +761,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -771,7 +771,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -819,7 +819,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -829,7 +829,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -839,7 +839,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -849,7 +849,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -859,7 +859,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -869,7 +869,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -879,7 +879,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -889,7 +889,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -899,7 +899,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -909,17 +909,23 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
         id: "dristi-poudel",
         name: "द्रिश्टी पौडेल",
-        dob: "1990-4-23",
+        dob: "2001-04-24",
         dod: null,
-        image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: `
+        <b> Education </b>: Business in Business Studies
+        <br/>
+        <b> Profession</b>: Internship in Nic Asia Bank
+        <br/>
+        <br/>
+        I am a kind hearted person who believes in humanistic philosophy.
+        `,
     },
 
     {
@@ -929,7 +935,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -939,7 +945,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -949,7 +955,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -959,7 +965,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -969,7 +975,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-female.png",
         gender: GENDER.FEMALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 
     {
@@ -979,7 +985,7 @@ const DETAILS: Person[] = [
         dod: null,
         image: "nepali-male.png",
         gender: GENDER.MALE,
-        bio: "He was a very good man.",
+        bio: "Please fill up thr form to update your information.",
     },
 ]
 
