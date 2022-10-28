@@ -45,7 +45,20 @@ export class FamilyTree extends React.Component<Props, State> {
 
     componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
         if (prevProps.activePersonId != this.props.activePersonId) {
-            this.setState({ activePerson: searchTree(this.props.activePersonId, this.state.treeDataRaw) });
+
+            let activePerson = searchTree(this.props.activePersonId, this.state.treeDataRaw);
+            this.setState({ activePerson });
+
+            let activePersonElem = document.getElementById(this.props.activePersonId + '');
+            if (activePersonElem) {
+                activePersonElem.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+
+                //
+                Array.from(document.querySelectorAll(".person")).forEach(person => {
+                    person.children[0].classList.remove("!text-red-800");
+                });
+                activePersonElem.children[0].classList.add("!text-red-800");
+            }
         }
     }
 
@@ -95,7 +108,7 @@ export class FamilyTree extends React.Component<Props, State> {
                     })
                 })
             }
-        } else console.log(Treant, this.state.treantData, this.state.treant);
+        };
     }
 
     handleDownloadClick = () => {

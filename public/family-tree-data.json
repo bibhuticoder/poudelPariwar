@@ -4,7 +4,6 @@
         "name": "नरहरि पौडेल",
         "dob": null,
         "dod": null,
-        "image": "nepali-male.png",
         "gender": 0,
         "bio": null
     },
@@ -14,7 +13,6 @@
             "name": "",
             "dob": null,
             "dod": null,
-            "image": "nepali-female.png",
             "gender": 1,
             "bio": null
         }
@@ -26,7 +24,6 @@
                 "name": "कालीदास पौडेल",
                 "dob": null,
                 "dod": null,
-                "image": "nepali-male.png",
                 "gender": 0,
                 "bio": null
             },
@@ -36,7 +33,6 @@
                     "name": "",
                     "dob": null,
                     "dod": null,
-                    "image": "nepali-female.png",
                     "gender": 1,
                     "bio": null
                 }
@@ -48,7 +44,6 @@
                         "name": "मोक्ष्यानाथ पौडेल",
                         "dob": null,
                         "dod": null,
-                        "image": "nepali-male.png",
                         "gender": 0,
                         "bio": null
                     },
@@ -58,7 +53,6 @@
                             "name": "",
                             "dob": null,
                             "dod": null,
-                            "image": "nepali-female.png",
                             "gender": 1,
                             "bio": null
                         }
@@ -70,7 +64,6 @@
                         "name": "गोविन्द प्रसाद पौडेल",
                         "dob": null,
                         "dod": null,
-                        "image": "nepali-male.png",
                         "gender": 0,
                         "bio": null
                     },
@@ -80,7 +73,6 @@
                             "name": "शिवमाया पौडेल",
                             "dob": null,
                             "dod": null,
-                            "image": "nepali-female.png",
                             "gender": 1,
                             "bio": null
                         }
@@ -92,7 +84,6 @@
                                 "name": "रामचन्द्र पौडेल",
                                 "dob": null,
                                 "dod": null,
-                                "image": "nepali-male.png",
                                 "gender": 0,
                                 "bio": null
                             },
@@ -102,7 +93,6 @@
                                     "name": "गंगादेवी पौडेल",
                                     "dob": null,
                                     "dod": null,
-                                    "image": "nepali-female.png",
                                     "gender": 1,
                                     "bio": null
                                 }
@@ -114,7 +104,6 @@
                                         "name": "लभ पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
@@ -124,7 +113,6 @@
                                             "name": "तारा पौडेल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -136,7 +124,6 @@
                                                 "name": "सन्तोष पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -146,7 +133,6 @@
                                                     "name": "निर्मला फुयाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -158,7 +144,6 @@
                                                         "name": "आरुष पौडेल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -170,7 +155,6 @@
                                                         "name": "आयाम पौडेल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -184,7 +168,6 @@
                                                 "name": "संजय पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -194,7 +177,6 @@
                                                     "name": "श्रद्धा फुयाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -206,7 +188,6 @@
                                                         "name": "शिवान्शी पौडेल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 1,
                                                         "bio": null
                                                     },
@@ -222,17 +203,15 @@
                                         "name": "गौरी वाग्ले",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 1,
                                         "bio": null
                                     },
                                     "spouse": [
                                         {
-                                            "id": "rupak-ko-dad",
-                                            "name": "",
+                                            "id": "hareram-wagle",
+                                            "name": "हरेराम वाग्ले",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 0,
                                             "bio": null
                                         }
@@ -240,11 +219,10 @@
                                     "children": [
                                         {
                                             "self": {
-                                                "id": "rupak-ko-didi",
-                                                "name": "",
+                                                "id": "saru-wagle",
+                                                "name": "सरु वाग्ले",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -256,7 +234,6 @@
                                                 "name": "रुपा वाग्ले",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -266,7 +243,6 @@
                                                     "name": "सुवास सापकोटा",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -278,7 +254,6 @@
                                                 "name": "रुपक वाग्ले",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -294,7 +269,6 @@
                                 "name": "लक्ष्मण पौडेल",
                                 "dob": null,
                                 "dod": null,
-                                "image": "nepali-male.png",
                                 "gender": 0,
                                 "bio": null
                             },
@@ -304,7 +278,6 @@
                                     "name": "कान्छी पौडेल",
                                     "dob": null,
                                     "dod": null,
-                                    "image": "nepali-female.png",
                                     "gender": 1,
                                     "bio": null
                                 }
@@ -316,7 +289,6 @@
                                         "name": "पुष्कर पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
@@ -326,7 +298,6 @@
                                             "name": "कमला पौडेल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -338,7 +309,6 @@
                                                 "name": "पुरुसोत्तम पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -348,7 +318,6 @@
                                                     "name": "लिला पौडेल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -360,7 +329,6 @@
                                                         "name": "प्रियल पौडेल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 1,
                                                         "bio": null
                                                     },
@@ -374,7 +342,6 @@
                                                 "name": "जया पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -384,7 +351,6 @@
                                                     "name": "दीपक प्रसाद खनाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -396,7 +362,6 @@
                                                         "name": "दिवा खनाल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-female.png",
                                                         "gender": 1,
                                                         "bio": null
                                                     },
@@ -408,7 +373,6 @@
                                                         "name": "पार्थ खनाल",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -422,7 +386,6 @@
                                                 "name": "बिजया पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -432,7 +395,6 @@
                                                     "name": "कुमार भण्डारी",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -446,7 +408,6 @@
                                         "name": "रमा भण्डारी",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 1,
                                         "bio": null
                                     },
@@ -456,7 +417,6 @@
                                             "name": "दिल्ली राम भण्डारी ",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 0,
                                             "bio": null
                                         }
@@ -468,7 +428,6 @@
                                                 "name": "शोभा भण्डारी",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -478,7 +437,6 @@
                                                     "name": "प्रदीप चालिसे",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -490,7 +448,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -502,7 +459,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -516,7 +472,6 @@
                                                 "name": "प्रभा भण्डारी",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -526,9 +481,30 @@
                                                     "name": "अनिल बराल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "self": {
+                                                        "id": "prabha-anil-son-1",
+                                                        "name": "",
+                                                        "dob": null,
+                                                        "dod": null,
+                                                        "gender": 0,
+                                                        "bio": null
+                                                    }
+                                                },
+                                                {
+                                                    "self": {
+                                                        "id": "prabha-anil-son-2",
+                                                        "name": "",
+                                                        "dob": null,
+                                                        "dod": null,
+                                                        "gender": 0,
+                                                        "bio": null
+                                                    }
                                                 }
                                             ]
                                         },
@@ -538,7 +514,6 @@
                                                 "name": "प्रतिभा भण्डारी",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -548,7 +523,6 @@
                                                     "name": "",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -562,17 +536,15 @@
                                         "name": "दुर्गा ढकाल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 1,
                                         "bio": null
                                     },
                                     "spouse": [
                                         {
                                             "id": "durga-dhakal-husband",
-                                            "name": "vinaju ढकाल",
+                                            "name": "",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 0,
                                             "bio": null
                                         }
@@ -584,7 +556,6 @@
                                                 "name": "दिपीन ढकाल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -594,7 +565,6 @@
                                                     "name": "श्रेया ढकाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -606,7 +576,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -618,7 +587,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -632,7 +600,6 @@
                                                 "name": "दिलीप ढकाल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -642,7 +609,6 @@
                                                     "name": "रश्मि ढकाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -654,7 +620,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -666,7 +631,6 @@
                                                         "name": "",
                                                         "dob": null,
                                                         "dod": null,
-                                                        "image": "nepali-male.png",
                                                         "gender": 0,
                                                         "bio": null
                                                     },
@@ -682,7 +646,6 @@
                                         "name": "शंकर पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
@@ -692,7 +655,6 @@
                                             "name": "सावित्री पौडेल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -704,7 +666,6 @@
                                                 "name": "सबल पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -716,7 +677,6 @@
                                                 "name": "सलिना पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -730,7 +690,6 @@
                                         "name": "प्रभाकर पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
@@ -740,7 +699,6 @@
                                             "name": "धन पौडेल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -752,7 +710,6 @@
                                                 "name": "श्रद्धा पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -764,7 +721,6 @@
                                                 "name": "श्रीया पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -776,7 +732,6 @@
                                                 "name": "आदित्य पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -792,7 +747,6 @@
                                 "name": "दामोदर प्रसाद पौडेल",
                                 "dob": null,
                                 "dod": null,
-                                "image": "nepali-male.png",
                                 "gender": 0,
                                 "bio": null
                             },
@@ -802,7 +756,6 @@
                                     "name": "भवानी पौडेल",
                                     "dob": null,
                                     "dod": null,
-                                    "image": "nepali-female.png",
                                     "gender": 1,
                                     "bio": null
                                 }
@@ -814,7 +767,6 @@
                                         "name": "लक्ष्मी भट्टराई",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 1,
                                         "bio": null
                                     },
@@ -824,7 +776,6 @@
                                             "name": "शार्दुल भट्टराई",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -836,7 +787,6 @@
                                                 "name": "गौरव भट्टराई",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -846,7 +796,6 @@
                                                     "name": "निलम शाही",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-male.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -858,7 +807,6 @@
                                                 "name": "सौरब भट्टराई",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -868,7 +816,6 @@
                                                     "name": "मनीषा सिलवाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-male.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -882,17 +829,15 @@
                                         "name": "बासु देव पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
                                     "spouse": [
                                         {
                                             "id": "binu-gautam-poudel",
-                                            "name": " बिनु पौडेल",
+                                            "name": "बिनु गौतम पौडेल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -913,7 +858,6 @@
                                                     "name": "प्रतिमा लुइँटेल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-female.png",
                                                     "gender": 1,
                                                     "bio": null
                                                 }
@@ -938,7 +882,6 @@
                                         "name": "बिनु खनाल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 1,
                                         "bio": null
                                     },
@@ -948,7 +891,6 @@
                                             "name": "उमेश खनाल",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 0,
                                             "bio": null
                                         }
@@ -960,7 +902,6 @@
                                                 "name": "सुबिना खनाल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -970,7 +911,6 @@
                                                     "name": "सशी राज पाण्डे",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-male.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -982,7 +922,6 @@
                                                 "name": "रुबिना खनाल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -996,17 +935,15 @@
                                         "name": "दिवाकर पौडेल",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
                                     "spouse": [
                                         {
                                             "id": "bhawani-dawadi-poudel",
-                                            "name": "भवानी (दीपा) पौडेल",
+                                            "name": "भवानी दवाडी (दीपा पौडेल)",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 1,
                                             "bio": null
                                         }
@@ -1018,7 +955,6 @@
                                                 "name": "दिक्ष्या पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-female.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -1028,7 +964,6 @@
                                                     "name": "प्रविन खनाल",
                                                     "dob": null,
                                                     "dod": null,
-                                                    "image": "nepali-male.png",
                                                     "gender": 0,
                                                     "bio": null
                                                 }
@@ -1051,7 +986,6 @@
                                                 "name": "दिक्ष्यंत पौडेल",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-male.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -1065,7 +999,6 @@
                                         "name": "सरला पौडेल सुवेदी",
                                         "dob": null,
                                         "dod": null,
-                                        "image": "nepali-male.png",
                                         "gender": 0,
                                         "bio": null
                                     },
@@ -1075,7 +1008,6 @@
                                             "name": "चन्द्र सुवेदी",
                                             "dob": null,
                                             "dod": null,
-                                            "image": "nepali-female.png",
                                             "gender": 0,
                                             "bio": null
                                         }
@@ -1087,7 +1019,6 @@
                                                 "name": "सार्थक सुवेदी",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-female.png",
                                                 "gender": 0,
                                                 "bio": null
                                             },
@@ -1099,7 +1030,6 @@
                                                 "name": "सारा सुवेदी",
                                                 "dob": null,
                                                 "dod": null,
-                                                "image": "nepali-female.png",
                                                 "gender": 1,
                                                 "bio": null
                                             },
@@ -1115,7 +1045,6 @@
                                 "name": "नारायण प्रसाद पौडेल",
                                 "dob": null,
                                 "dod": null,
-                                "image": "nepali-male.png",
                                 "gender": 0,
                                 "bio": null
                             },
