@@ -37,19 +37,19 @@
                 }
 
                 // wedding connector
-                &:nth-child(odd)::after {
-                    content: "";
-                    height: 2rem;
-                    width: 1.5rem;
-                    background-image: url(/images/wedding-symbol.png);
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    right: -0.25rem;
-                    top: 50%;
-                    transform: translate(50%, -50%);
-                    z-index: 2;
-                }
+                // &:nth-child(odd)::after {
+                //     content: "";
+                //     height: 2rem;
+                //     width: 1.5rem;
+                //     background-image: url(/images/wedding-symbol.png);
+                //     background-size: contain;
+                //     background-repeat: no-repeat;
+                //     position: absolute;
+                //     right: -0.25rem;
+                //     top: 50%;
+                //     transform: translate(50%, -50%);
+                //     z-index: 2;
+                // }
             }
         }
     }

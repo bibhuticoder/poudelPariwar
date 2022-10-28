@@ -55,7 +55,7 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     fetchData = async () => {
-        let resp = await fetch('/family-tree-data.json');
+        let resp = await fetch('family-tree-data.json');
         let json = await resp.json();
         this.setState({ treantData: transformTree(json), treeDataRaw: json });
     }
@@ -118,7 +118,6 @@ export class FamilyTree extends React.Component<Props, State> {
                             <BsCloudDownload />
                         </button>
                     </div>
-
 
                     <div className="relative overflow-x-auto">
                         <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} style={{
