@@ -37,8 +37,7 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     async componentDidMount() {
-        await this.fetchData();
-        this.initTreant();
+        await this.fetchData(() => this.initTreant());
 
         if (this.props.activePersonId)
             this.setState({ activePerson: searchTree(this.props.activePersonId, this.state.treeDataRaw) })
@@ -54,10 +53,10 @@ export class FamilyTree extends React.Component<Props, State> {
         this.setState({ treant: null });
     }
 
-    fetchData = async () => {
+    fetchData = async (callback: any) => {
         let resp = await fetch('family-tree-data.json');
         let json = await resp.json();
-        this.setState({ treantData: transformTree(json), treeDataRaw: json });
+        this.setState({ treantData: transformTree(json), treeDataRaw: json }, () => callback());
     }
 
     initTreant = () => {
@@ -96,7 +95,7 @@ export class FamilyTree extends React.Component<Props, State> {
                     })
                 })
             }
-        }
+        } else console.log(Treant, this.state.treantData, this.state.treant);
     }
 
     handleDownloadClick = () => {
