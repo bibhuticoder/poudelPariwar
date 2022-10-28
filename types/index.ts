@@ -12,7 +12,8 @@ export type Person = {
 }
 
 export type TreeItem = {
-    self: String,
-    spouse?: String
-    children?: String[]
+    self?: Person,
+    spouse?: Person[],
+    innerHTML?: String,
+    children?: Person[]
 }

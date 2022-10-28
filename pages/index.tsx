@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { FamilyTree } from '../components/FamilyTree/FamilyTree'
 import { FAMILY_TREE_MODE } from "../enums"
 import { useRouter } from 'next/router'
-import { findPersonById } from '../components/FamilyTree/data-details'
+import { searchTree } from '../utils/family-tree.util'
 import { BsJournalText } from "react-icons/bs"
 
 const Home: NextPage = () => {
@@ -18,9 +18,8 @@ const Home: NextPage = () => {
     });
   }
 
-  let activePerson = null;
-  if (router.query.id)
-    activePerson = findPersonById("" + router.query.id)
+  let activePersonId = null;
+  if (router.query.id) activePersonId = router.query.id + ""
 
   return (
     <div>
@@ -52,10 +51,18 @@ const Home: NextPage = () => {
       </div>
 
       <div className="px-0 md:px-8 mx-auto my-8">
-        <FamilyTree mode={FAMILY_TREE_MODE.MIN} activePerson={activePerson} />
+        <FamilyTree activePersonId={activePersonId} />
       </div>
 
-      <div className="sticky bottom-2 rounded bg-red-500 text-white p-4 w-80 mx-auto text-center">
+      <section id="roadmap" className='container text-black'>
+        <h1 className="text-5xl mb-8">Roadmap</h1>
+        <p className='mb-4 text-2xl line-through'>1. Initial launch</p>
+        <p className='mb-4 text-2xl'>2. Data collection for FamilyTree</p>
+        <p className='mb-4 text-2xl'>3. Family history page</p>
+        <p className='mb-4 text-2xl'>4. About, contribute page</p>
+      </section>
+
+      <div className="sticky bottom-2 rounded bg-red-400 opacity-80 text-white p-4 w-80 mx-auto text-center z-10">
         <p className="text-xl mb-6">
           कृपया आफ्नो जानकारी अपडेट गर्न तलको फारम भर्नुहोस् ।
         </p>

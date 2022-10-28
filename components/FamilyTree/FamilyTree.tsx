@@ -1,21 +1,22 @@
 import React from "react"
-import { FAMILY_TREE_DATA } from "./data"
 import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
 import { BsCloudDownload } from 'react-icons/bs'
 import { FamilyTreeModal } from "./FamilyTreeModal"
 import { DownloadModal } from "../DownloadModal/DownloadModal"
 import { Person } from "../../types"
+import { transformTree, searchTree } from "../../utils/family-tree.util"
 
 type Props = {
-    mode: FAMILY_TREE_MODE
-    activePerson: Person | null
+    activePersonId: String | null
 };
 
 type State = {
+    treeDataRaw: any
+    treantData: any
     treant: any
-    mode: FAMILY_TREE_MODE
     showDownloadModal: Boolean
+    activePerson: Person | null
 };
 
 declare var Treant: any;
@@ -26,23 +27,41 @@ export class FamilyTree extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = {
+            treantData: null,
+            treeDataRaw: null,
             treant: null,
-            mode: this.props.mode,
-            showDownloadModal: false
+            showDownloadModal: false,
+            activePerson: null
         };
         this.familyTreeRef = React.createRef()
     }
 
-    componentDidMount() {
+    async componentDidMount() {
+        await this.fetchData();
         this.initTreant();
+
+        if (this.props.activePersonId)
+            this.setState({ activePerson: searchTree(this.props.activePersonId, this.state.treeDataRaw) })
+    }
+
+    componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
+        if (prevProps.activePersonId != this.props.activePersonId) {
+            this.setState({ activePerson: searchTree(this.props.activePersonId, this.state.treeDataRaw) });
+        }
     }
 
     componentWillUnmount(): void {
         this.setState({ treant: null });
     }
 
+    fetchData = async () => {
+        let resp = await fetch('/family-tree-data.json');
+        let json = await resp.json();
+        this.setState({ treantData: transformTree(json), treeDataRaw: json });
+    }
+
     initTreant = () => {
-        if (Treant && !this.state.treant) {
+        if (Treant && this.state.treantData && !this.state.treant) {
             let treant = new Treant({
                 chart: {
                     container: "#family-tree",
@@ -65,7 +84,7 @@ export class FamilyTree extends React.Component<Props, State> {
                         HTMLclass: "node",
                     },
                 },
-                nodeStructure: FAMILY_TREE_DATA(this.state.mode),
+                nodeStructure: this.state.treantData,
             });
             this.setState({ treant });
 
@@ -80,15 +99,6 @@ export class FamilyTree extends React.Component<Props, State> {
         }
     }
 
-    handleModeChange = (event: any) => {
-        this.setState({ mode: event.target.value });
-        if (this.familyTreeRef.current) {
-            this.setState({ treant: null });
-            (this.familyTreeRef.current as HTMLElement).innerHTML = "";
-            setTimeout(() => this.initTreant(), 250);
-        }
-    }
-
     handleDownloadClick = () => {
         this.setState({ showDownloadModal: true });
     }
@@ -97,7 +107,6 @@ export class FamilyTree extends React.Component<Props, State> {
 
         const treeClass = () => {
             let classNames = ['rounded-md'];
-            classNames.push(' --' + { 0: 'min', 1: 'max' }[this.state.mode]);
             return classNames.join(' ');
         };
 
@@ -105,15 +114,11 @@ export class FamilyTree extends React.Component<Props, State> {
             <section id="chronicles" className="relative">
                 <div className="mx-auto px-4">
                     <div className="toolbar flex justify-end">
-                        <select onChange={this.handleModeChange} className="bg-gray-200 rounded-md px-3 py-2 m-2 outline-none">
-                            <option value={FAMILY_TREE_MODE.MIN}> Min </option>
-                            <option value={FAMILY_TREE_MODE.MAX}>Max</option>
-                        </select>
-
                         <button onClick={this.handleDownloadClick} className="bg-gray-200 rounded-md px-3 py-2 m-2" title="Download">
                             <BsCloudDownload />
                         </button>
                     </div>
+
 
                     <div className="relative overflow-x-auto">
                         <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} style={{
@@ -123,11 +128,12 @@ export class FamilyTree extends React.Component<Props, State> {
                             backgroundSize: 'cover'
                         }} />
                     </div>
+
                 </div>
 
-                {this.props.activePerson && <FamilyTreeModal person={this.props.activePerson} />}
+                {this.state.activePerson && <FamilyTreeModal person={this.state.activePerson} onClose={() => this.setState({ activePerson: null })} />}
 
-                <DownloadModal loading={false} familyTreeRef={this.familyTreeRef.current} show={this.state.showDownloadModal} />
+                {this.state.showDownloadModal && <DownloadModal loading={false} familyTreeRef={this.familyTreeRef.current} onClose={() => this.setState({ showDownloadModal: false })} />}
             </section>
         );
     }

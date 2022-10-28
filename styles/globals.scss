@@ -11,12 +11,16 @@
         @apply flex flex-row p-1;
 
         .person {
-            @apply w-28 h-36 flex flex-col py-2 rounded-md cursor-pointer text-center;
+            @apply rounded-md cursor-pointer text-center grid place-content-center h-auto w-20 px-4 py-4 break-words;
             @apply bg-no-repeat bg-center bg-cover;
             background-image: url("/images/old-paper-piece.png");
 
             .image {
-                @apply w-12 h-12 rounded-full mx-auto mb-4;
+                @apply w-12 h-12 rounded-full mx-auto mb-4 hidden;
+            }
+
+            .age {
+                @apply hidden;
             }
 
             .name {
@@ -41,22 +45,11 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     position: absolute;
-                    right: -.25rem;
+                    right: -0.25rem;
                     top: 50%;
                     transform: translate(50%, -50%);
-                    z-index: 10;
+                    z-index: 2;
                 }
-            }
-        }
-    }
-
-    &.--min {
-        .person-group .person {
-            @apply grid place-content-center;
-            @apply h-auto w-20 px-4 py-4 break-words;
-            .image,
-            .age {
-                @apply hidden;
             }
         }
     }

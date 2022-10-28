@@ -5,9 +5,9 @@ import { Modal } from "../Modal/Modal"
 import { BsCloudDownload } from 'react-icons/bs'
 
 type Props = {
-    show: Boolean
-    loading: Boolean;
+    loading: Boolean
     familyTreeRef: any
+    onClose: Function
 };
 
 type State = {
@@ -54,7 +54,7 @@ export class DownloadModal extends React.Component<Props, State> {
 
 
         return <>
-            <Modal show={this.props.show} backButton={true}>
+            <Modal backButton={true} onClose={() => this.props.onClose()}>
                 <div className="px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-center bg-white rounded-md text-gray-700 font-Mukta">
                     {content}
                 </div>

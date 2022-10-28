@@ -6,23 +6,25 @@ import { Modal } from "../Modal/Modal";
 import parse from "html-react-parser";
 
 type Props = {
-    person: Person
+    person: Person,
+    onClose: Function
 };
 
 type State = {
-    person: Person
+    person: Person,
+    showImage: Boolean
 };
 
 export class FamilyTreeModal extends React.Component<Props, State> {
 
     constructor(props: any) {
         super(props);
-        this.state = { person: this.props.person };
+        this.state = { person: this.props.person, showImage: true };
     }
 
     render() {
         return <>
-            <Modal show={true} backButton={true} >
+            <Modal backButton={true} onClose={() => this.props.onClose()} >
                 <div className="px-4 pt-8 pb-4 sm:p-6 sm:pb-4 text-center  text-gray-700 font-Mukta" style={{
                     backgroundImage: `url(${oldPaperImage.src})`,
                     backgroundPosition: 'center',
@@ -33,13 +35,16 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                     <div className="m-8"></div>
 
                     {/* Profile Image */}
-                    <Image
-                        src={`/images/${this.props.person.id}.jpg` || ''}
-                        width="120"
-                        height="120"
-                        alt="Please fill up the form to update details"
-                        className="rounded-full object-cover"
-                    />
+                    {this.state.showImage &&
+                        <Image
+                            src={`/images/${this.props.person.id}.jpg` || ''}
+                            width="120"
+                            height="120"
+                            alt="फेला परेन"
+                            className="rounded-full object-cover"
+                            onError={() => { this.setState({ showImage: false }) }}
+                        />
+                    }
 
                     {/* Name */}
                     <h1 className="text-4xl mt-4 font-semibold">
@@ -47,11 +52,13 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                     </h1>
 
                     {/* DOB - DOD */}
-                    <p className="mt-2">
-                        <span className="bg-gray-200 px-2 rounded-md">
-                            {this.props.person.age}
-                        </span>
-                    </p>
+                    {this.props.person.age &&
+                        <p className="mt-2">
+                            <span className="bg-gray-200 px-2 rounded-md">
+                                {this.props.person.age}
+                            </span>
+                        </p>
+                    }
 
                     <p className="text-xl mt-8 max-h-80 overflow-y-auto text-justify px-4 mb-4">
                         {this.props.person.bio && parse(this.props.person.bio)}
