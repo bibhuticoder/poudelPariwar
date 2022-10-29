@@ -23,4 +23,9 @@ const ageByDob = (dob: string) => {
     return diff;
 }
 
-export { npDigit, ageByDob }
+const lifespan = (dob: string, dod: string) => {
+    let diff = moment(dod, "YYYY/MM/DD").diff(moment(dob, "YYYY/MM/DD"), "years", false);
+    return diff;
+}
+
+export { npDigit, ageByDob, lifespan }

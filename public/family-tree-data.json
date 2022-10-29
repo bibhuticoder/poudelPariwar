@@ -62,8 +62,9 @@
                     "self": {
                         "id": "govinda-prasad-poudel",
                         "name": "गोविन्द प्रसाद पौडेल",
-                        "dob": null,
-                        "dod": null,
+                        "dob": "1904-01-01",
+                        "dod": "1959-04-14",
+                        "hasAccurateAge": false,
                         "gender": 0,
                         "bio": null
                     },
@@ -743,7 +744,7 @@
                         },
                         {
                             "self": {
-                                "id": "damodar-poudel",
+                                "id": "damodar-prasad-poudel",
                                 "name": "दामोदर प्रसाद पौडेल",
                                 "dob": null,
                                 "dod": null,
@@ -754,7 +755,7 @@
                                 {
                                     "id": "bhawani-poudel",
                                     "name": "भवानी पौडेल",
-                                    "dob": null,
+                                    "dob": "1947-08-20",
                                     "dod": null,
                                     "gender": 1,
                                     "bio": null
@@ -836,7 +837,7 @@
                                         {
                                             "id": "binu-gautam-poudel",
                                             "name": "बिनु गौतम पौडेल",
-                                            "dob": null,
+                                            "dob": "1971-06-15",
                                             "dod": null,
                                             "gender": 1,
                                             "bio": null
@@ -942,7 +943,7 @@
                                         {
                                             "id": "bhawani-dawadi-poudel",
                                             "name": "भवानी दवाडी (दीपा पौडेल)",
-                                            "dob": null,
+                                            "dob": "1977-09-21",
                                             "dod": null,
                                             "gender": 1,
                                             "bio": null

@@ -1,12 +1,27 @@
 import { Person, TreeItem } from "../types";
-import { npDigit, ageByDob } from "./index.utils";
+import { npDigit, ageByDob, lifespan } from "./index.utils";
 import * as DOMPurify from 'dompurify';
 
 const TRANSFORMS = {
 
     data: (person: Person): Person => {
-        if (person.dob)
+        if (person.dob && !person.dod)
             person.age = npDigit(ageByDob(person.dob).toString()) + ' वर्ष';
+
+        if (person.dob && person.dod) {
+            let dob = npDigit(person.dob);
+            let dod = npDigit(person.dod);
+
+            // keep years only
+            if (!person.hasAccurateAge) {
+                dob = dob?.split('-').shift() as string;
+                dod = dod?.split('-').shift() as string;
+            }
+
+            let age = npDigit(lifespan(person.dob, person.dod).toString()) + ' वर्ष'
+
+            person.age = { lifespan: `${dob} - ${dod}`, age };
+        }
 
         if (person.bio)
             person.bio = DOMPurify.sanitize(person.bio);

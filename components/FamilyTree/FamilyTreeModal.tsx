@@ -54,9 +54,22 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                     {/* DOB - DOD */}
                     {this.props.person.age &&
                         <p className="mt-2">
-                            <span className="bg-gray-200 px-2 rounded-md">
-                                {this.props.person.age}
-                            </span>
+
+                            {this.props.person.dod ? (
+                                <>
+                                    <span className="bg-gray-200 px-2 rounded-md mr-2">
+                                        {this.props.person.age.lifespan}
+                                    </span>
+
+                                    <span className="bg-gray-200 px-2 rounded-md">
+                                        {this.props.person.age.age}
+                                    </span>
+                                </>
+                            ) : (
+                                <span className="bg-gray-200 px-2 rounded-md">
+                                    {this.props.person.age}
+                                </span>
+                            )}
                         </p>
                     }
 
