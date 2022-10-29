@@ -48,16 +48,19 @@ export class FamilyTree extends React.Component<Props, State> {
         if (prevProps.activePersonId != this.props.activePersonId || (this.props.activePersonId && !this.state.activePerson)) {
 
             let activePerson = searchTree(this.props.activePersonId, this.state.treeDataRaw);
+            if(!activePerson) return;
             this.setState({ activePerson });
 
             let activePersonElem = document.getElementById(this.props.activePersonId + '');
             if (activePersonElem) {
                 activePersonElem.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
 
-                //
+                // disable all
                 Array.from(document.querySelectorAll(".person")).forEach(person => {
                     person.children[0].classList.remove("!text-red-800");
                 });
+                 
+                // enable one
                 activePersonElem.children[0].classList.add("!text-red-800");
             }
         }
