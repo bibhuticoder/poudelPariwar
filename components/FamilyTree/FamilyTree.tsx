@@ -128,7 +128,7 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     handleSearchKeywordChange = (event: any) => {
-        this.setState({ searchKeyword: event.target.value });
+        this.setState({ searchKeyword: (event.target.value as String).toLowerCase() });
         let results = searchTree(this.state.searchKeyword, this.state.treeDataRaw);
         this.setState({
             searchResults: results.filter(r => r.name.length).map(r => { return { id: r.id, name: r.name } })
