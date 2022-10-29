@@ -1,30 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Script from 'next/script'
 import { FamilyTree } from '../components/FamilyTree/FamilyTree'
 import { FAMILY_TREE_MODE } from "../enums"
 import { useRouter } from 'next/router'
-import { searchTree } from '../utils/family-tree.util'
 import FormNotice from '../components/FormNotice/FormNotice'
 import RoadMap from '../components/Roadmap/Roadmap'
 
 const Home: NextPage = () => {
 
   const router = useRouter()
+  let activePersonId: any = null;
+
 
   if (typeof window !== "undefined") {
     window.document.addEventListener("show-person-detail", (data: any) => {
-      router.push('?id=' + data.detail);
+      router.push('?name=' + data.detail);
     });
   }
 
-  let activePersonId = null;
-  if (router.query.id) activePersonId = router.query.id + ""
+  if (router.query.name) activePersonId = (router.query.name + "")
+
 
 
   const handleActivePersonRemove = () => {
-    router.push('/');
+    if (activePersonId) activePersonId = null;
   }
 
   return (

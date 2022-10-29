@@ -34,7 +34,7 @@ export class FamilyTreeModal extends React.Component<Props, State> {
 
     render() {
         return <>
-            <Modal backButton={true} onClose={() => this.props.onClose()} >
+            <Modal backButton={true} onClose={this.props.onClose} >
                 <div className="px-4 pt-8 pb-4 sm:p-6 sm:pb-4 text-center  text-gray-700 font-Mukta" style={{
                     backgroundImage: `url(${oldPaperImage.src})`,
                     backgroundPosition: 'center',

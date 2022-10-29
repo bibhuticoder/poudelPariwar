@@ -45,10 +45,10 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
-        if (prevProps.activePersonId != this.props.activePersonId || (this.props.activePersonId && !this.state.activePerson)) {
 
+        if (prevProps.activePersonId != this.props.activePersonId && this.props.activePersonId && !this.state.activePerson) {
             let activePerson = searchTree(this.props.activePersonId, this.state.treeDataRaw);
-            if(!activePerson) return;
+            if (!activePerson) return;
             this.setState({ activePerson });
 
             let activePersonElem = document.getElementById(this.props.activePersonId + '');
@@ -59,7 +59,7 @@ export class FamilyTree extends React.Component<Props, State> {
                 Array.from(document.querySelectorAll(".person")).forEach(person => {
                     person.children[0].classList.remove("!text-red-800");
                 });
-                 
+
                 // enable one
                 activePersonElem.children[0].classList.add("!text-red-800");
             }
@@ -120,11 +120,10 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     handleModalClose = () => {
-        this.setState({ activePerson: null });
-        this.props.onActivePersonRemove();
-        setTimeout(() => {
-            (this.familyTreeRef.current as HTMLDivElement).scrollIntoView({ block: "center", inline: "center" });
-        }, 100);
+        this.setState({ activePerson: null }, () => this.props.onActivePersonRemove());
+        // setTimeout(() => {
+        //     (this.familyTreeRef.current as HTMLDivElement).scrollIntoView({ block: "center", inline: "center" });
+        // }, 100);
     }
 
     render() {
