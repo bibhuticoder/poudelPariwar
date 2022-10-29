@@ -1,11 +1,11 @@
 import React from "react"
 import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
-import { BsCloudDownload } from 'react-icons/bs'
+import { BsCloudDownload, BsSearch } from 'react-icons/bs'
 import { FamilyTreeModal } from "./FamilyTreeModal"
 import { DownloadModal } from "../DownloadModal/DownloadModal"
 import { Person } from "../../types"
-import { transformTree, searchTree } from "../../utils/family-tree.util"
+import { transformTree, searchTree, findInTreeById } from "../../utils/family-tree.util"
 
 type Props = {
     activePersonId: String | null
@@ -18,6 +18,8 @@ type State = {
     treant: any
     showDownloadModal: Boolean
     activePerson: Person | null
+    searchKeyword: String | null,
+    searchResults: Person[]
 };
 
 declare var Treant: any;
@@ -32,7 +34,9 @@ export class FamilyTree extends React.Component<Props, State> {
             treeDataRaw: null,
             treant: null,
             showDownloadModal: false,
-            activePerson: null
+            activePerson: null,
+            searchKeyword: "",
+            searchResults: []
         };
         this.familyTreeRef = React.createRef()
     }
@@ -41,13 +45,13 @@ export class FamilyTree extends React.Component<Props, State> {
         await this.fetchData(() => this.initTreant());
 
         if (this.props.activePersonId)
-            this.setState({ activePerson: searchTree(this.props.activePersonId, this.state.treeDataRaw) })
+            this.setState({ activePerson: findInTreeById(this.props.activePersonId, this.state.treeDataRaw) })
     }
 
     componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
 
         if (prevProps.activePersonId != this.props.activePersonId && this.props.activePersonId && !this.state.activePerson) {
-            let activePerson = searchTree(this.props.activePersonId, this.state.treeDataRaw);
+            let activePerson = findInTreeById(this.props.activePersonId, this.state.treeDataRaw);
             if (!activePerson) return;
             this.setState({ activePerson });
 
@@ -121,9 +125,19 @@ export class FamilyTree extends React.Component<Props, State> {
 
     handleModalClose = () => {
         this.setState({ activePerson: null }, () => this.props.onActivePersonRemove());
-        // setTimeout(() => {
-        //     (this.familyTreeRef.current as HTMLDivElement).scrollIntoView({ block: "center", inline: "center" });
-        // }, 100);
+    }
+
+    handleSearchKeywordChange = (event: any) => {
+        this.setState({ searchKeyword: event.target.value });
+        let results = searchTree(this.state.searchKeyword, this.state.treeDataRaw);
+        this.setState({
+            searchResults: results.filter(r => r.name.length).map(r => { return { id: r.id, name: r.name } })
+        });
+    }
+
+    handleSearchResultChoose = (id: String) => {
+        this.setState({ searchKeyword: "", searchResults: [] });
+        window.document.dispatchEvent(new CustomEvent('show-person-detail', { detail: id }));
     }
 
     render() {
@@ -136,10 +150,36 @@ export class FamilyTree extends React.Component<Props, State> {
         return (
             <section id="chronicles" className="relative">
                 <div className="mx-auto px-4">
-                    <div className="toolbar flex justify-end">
-                        <button onClick={this.handleDownloadClick} className="bg-gray-200 rounded-md px-3 py-2 m-2" title="Download">
-                            <BsCloudDownload />
-                        </button>
+                    <div className="toolbar flex items-center justify-end">
+
+                        {/* search */}
+                        <div className="relative flex-grow md:max-w-xs">
+                            <div className="flex items-center border-2 border-gray-200 rounded px-2 py-1">
+                                <span className="text-gray-300">
+                                    <BsSearch />
+                                </span>
+                                <input type="text" value={this.state.searchKeyword as string} className="pl-2 outline-none w-full text-black" onChange={this.handleSearchKeywordChange} />
+                            </div>
+
+                            {this.state.searchResults.length > 0 &&
+                                <div className="absolute bg-gray-50 rounded z-10 w-full shadow-md">
+                                    <div className="flex flex-col">
+                                        {this.state.searchResults.map(sr =>
+                                            <div onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:bg-gray-200 hover:font-bold">
+                                                {sr.name}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        {/* download */}
+                        <div>
+                            <button onClick={this.handleDownloadClick} className="bg-gray-200 border-2 rounded-md px-3 py-2 m-2" title="Download">
+                                <BsCloudDownload />
+                            </button>
+                        </div>
                     </div>
 
                     <div className="relative overflow-x-auto">

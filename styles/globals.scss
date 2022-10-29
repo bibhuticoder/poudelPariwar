@@ -12,7 +12,7 @@
 
         .person {
             @apply rounded-md cursor-pointer text-center grid place-content-center h-auto w-20 px-4 py-4 break-words;
-            @apply bg-no-repeat bg-center bg-cover;
+            @apply bg-no-repeat bg-center bg-cover select-none;
             background-image: url("/images/old-paper-piece.png");
 
             .image {

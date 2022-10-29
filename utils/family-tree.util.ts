@@ -92,7 +92,34 @@ const transformTree = (_tree: any) => {
     return tree;
 }
 
-const searchTree = (id: String | null, tree: any): Person | null => {
+const searchTree = (id: String | null, tree: any) => {
+    let queue = [];
+    let current: any = tree;
+    let result = [];
+
+    queue.push(tree);
+    while (queue.length) {
+        current = queue.shift();
+        if (!current) continue;
+
+        // search condition
+
+        if (current.self && current.self.id.includes(id)) result.push(current.self);
+        if (current.spouse && current.spouse.length) {
+            for (let i = 0; i < current.spouse.length; i++) {
+                if (current.spouse[i].id.includes(id)) result.push(current.spouse[i]);
+            }
+        }
+
+        if (current.children && current.children.length) {
+            queue = queue.concat(current.children);
+        }
+    }
+    return result;
+}
+
+
+const findInTreeById = (id: String | null, tree: any): Person | null => {
     let queue = [];
     let current: any = tree;
 
@@ -119,4 +146,4 @@ const searchTree = (id: String | null, tree: any): Person | null => {
     return null;
 }
 
-export { transformTree, searchTree }
+export { transformTree, searchTree, findInTreeById }

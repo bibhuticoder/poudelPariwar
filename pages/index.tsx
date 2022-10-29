@@ -21,8 +21,6 @@ const Home: NextPage = () => {
 
   if (router.query.name) activePersonId = (router.query.name + "")
 
-
-
   const handleActivePersonRemove = () => {
     if (activePersonId) activePersonId = null;
   }
@@ -34,25 +32,24 @@ const Home: NextPage = () => {
       </Head>
 
 
-      <div className="container text-center font-Mukta py-8">
+      <section id='hero' className="container text-center font-Mukta py-8 text-black">
         <main>
-          <h1 className='text-8xl mb-16 text-black'>
+          <h1 className='text-6xl md:text-8xl mb-8'>
             पौडेल परिवार
           </h1>
 
-          <p className='text-2xl mb-8 text-black'>
-            <span className="text-3xl">
-              पौडेल परिवारमा स्वागत छ
-            </span>
-            <br />
-            <br />
+          <h2 className="text-2xl md:text-3xl mb-8">
+            पौडेल परिवारमा स्वागत छ
+          </h2>
+
+          <p className='text-xl md:text-2xl text-black'>
             यस पृष्ठमा पौडेल परिवारको सम्पूर्ण सामान्य जानकारी समावेश छ ।&nbsp;
             यसले नयाँ पुस्ताहरूलाई उनीहरूको पारिवारिक इतिहास र परिवारका सदस्यहरूको बारेमा थप जान्नको लागि सन्दर्भको रूपमा सेवा गर्ने लक्ष्य राख्छ ।
           </p>
         </main>
-      </div>
+      </section>
 
-      <div className="px-0 md:px-8 mx-auto my-8">
+      <div className="px-0 md:px-8 mx-auto my-4 mb-16">
         <FamilyTree activePersonId={activePersonId} onActivePersonRemove={handleActivePersonRemove} />
       </div>
 
