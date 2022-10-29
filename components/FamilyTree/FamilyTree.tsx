@@ -137,7 +137,10 @@ export class FamilyTree extends React.Component<Props, State> {
 
     handleSearchResultChoose = (id: String) => {
         this.setState({ searchKeyword: "", searchResults: [] });
-        window.document.dispatchEvent(new CustomEvent('show-person-detail', { detail: id }));
+
+        if (typeof window !== "undefined") {
+            window.document.dispatchEvent(new CustomEvent('show-person-detail', { detail: id }));
+        }
     }
 
     render() {
@@ -165,7 +168,7 @@ export class FamilyTree extends React.Component<Props, State> {
                                 <div className="absolute bg-gray-50 rounded z-10 w-full shadow-md">
                                     <div className="flex flex-col">
                                         {this.state.searchResults.map(sr =>
-                                            <div onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:bg-gray-200 hover:font-bold">
+                                            <div key={sr.id} onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:bg-gray-200 hover:font-bold">
                                                 {sr.name}
                                             </div>
                                         )}
