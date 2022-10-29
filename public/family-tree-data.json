@@ -247,6 +247,19 @@
                                                     "gender": 0,
                                                     "bio": null
                                                 }
+                                            ],
+
+                                            "children": [
+                                                {
+                                                    "self": {
+                                                        "id": "rupa-subash-wagle-son",
+                                                        "name": "",
+                                                        "dob": null,
+                                                        "dod": null,
+                                                        "gender": 0,
+                                                        "bio": null
+                                                    }
+                                                }
                                             ]
                                         },
                                         {

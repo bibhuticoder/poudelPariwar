@@ -4,6 +4,12 @@ import { Person } from "../../types";
 import oldPaperImage from "../../public/images/old-paper-piece.png"
 import { Modal } from "../Modal/Modal";
 import parse from "html-react-parser";
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+} from "next-share";
 
 type Props = {
     person: Person,
@@ -20,6 +26,10 @@ export class FamilyTreeModal extends React.Component<Props, State> {
     constructor(props: any) {
         super(props);
         this.state = { person: this.props.person, showImage: true };
+    }
+
+    handleShare = () => {
+        console.log(location.href);
     }
 
     render() {
@@ -73,9 +83,27 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                         </p>
                     }
 
+                    {/* Bio */}
                     <p className="text-xl mt-8 max-h-80 overflow-y-auto text-justify px-4 mb-4">
                         {this.props.person.bio && parse(this.props.person.bio)}
                     </p>
+
+                    {/* Share */}
+                    <div className="flex justify-center">
+
+                        <FacebookShareButton
+                            url={location.href}
+                            hashtag={'#bibhuti.me'}
+                        >
+                            <FacebookIcon size={32} round />
+                        </FacebookShareButton>
+                        <div className="m-2"></div>
+                        <TwitterShareButton
+                            url={location.href}
+                        >
+                            <TwitterIcon size={32} round />
+                        </TwitterShareButton>
+                    </div>
                 </div>
             </Modal>
         </>

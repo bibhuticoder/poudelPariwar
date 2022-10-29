@@ -9,6 +9,7 @@ import { transformTree, searchTree } from "../../utils/family-tree.util"
 
 type Props = {
     activePersonId: String | null
+    onActivePersonRemove: Function
 };
 
 type State = {
@@ -44,7 +45,7 @@ export class FamilyTree extends React.Component<Props, State> {
     }
 
     componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
-        if (prevProps.activePersonId != this.props.activePersonId) {
+        if (prevProps.activePersonId != this.props.activePersonId || (this.props.activePersonId && !this.state.activePerson)) {
 
             let activePerson = searchTree(this.props.activePersonId, this.state.treeDataRaw);
             this.setState({ activePerson });
@@ -115,6 +116,14 @@ export class FamilyTree extends React.Component<Props, State> {
         this.setState({ showDownloadModal: true });
     }
 
+    handleModalClose = () => {
+        this.setState({ activePerson: null });
+        this.props.onActivePersonRemove();
+        setTimeout(() => {
+            (this.familyTreeRef.current as HTMLDivElement).scrollIntoView({ block: "center", inline: "center" });
+        }, 100);
+    }
+
     render() {
 
         const treeClass = () => {
@@ -142,7 +151,7 @@ export class FamilyTree extends React.Component<Props, State> {
 
                 </div>
 
-                {this.state.activePerson && <FamilyTreeModal person={this.state.activePerson} onClose={() => this.setState({ activePerson: null })} />}
+                {this.state.activePerson && <FamilyTreeModal person={this.state.activePerson} onClose={this.handleModalClose} />}
 
                 {this.state.showDownloadModal && <DownloadModal loading={false} familyTreeRef={this.familyTreeRef.current} onClose={() => this.setState({ showDownloadModal: false })} />}
             </section>

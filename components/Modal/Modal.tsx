@@ -17,7 +17,7 @@ export class Modal extends React.Component<Props> {
         let backButton;
         if (this.props.backButton) {
             backButton =
-                <button className="m-4 mx-auto text-center flex items-center text-blue-500" onClick={() => this.props.onClose()}>
+                <button className="m-4 mx-auto text-center flex items-center text-blue-500 bg-blue-50 bg-opacity-60 px-4 py-2 rounded" onClick={() => this.props.onClose()}>
                     <BsArrowLeftCircleFill className="mr-2" />
                     <span> पछाडि जानुहोस् </span>
                 </button>
