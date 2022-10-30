@@ -181,7 +181,10 @@ export class FamilyTree extends React.Component<Props, State> {
 
                         {/* info  */}
                         <div className="text-black bg-gray-200 rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
-                            बंशावाली: वि.सं {npDigit('1823')} देखी आजसम्म
+                            बंशावाली: वि.सं
+                            xxxx &nbsp; 
+                            {/* {npDigit('1823')} */}
+                            देखी आजसम्म
                         </div>
 
                         <div className="flex items-center">

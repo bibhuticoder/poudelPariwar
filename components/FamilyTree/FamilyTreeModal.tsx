@@ -84,7 +84,7 @@ export class FamilyTreeModal extends React.Component<Props, State> {
                     }
 
                     {/* Bio */}
-                    <p className="text-xl mt-8 max-h-80 overflow-y-auto text-justify px-4 mb-4">
+                    <p className="text-xl mt-8 max-h-80 overflow-y-auto text-left px-4 mb-4">
                         {this.props.person.bio && parse(this.props.person.bio)}
                     </p>
 
