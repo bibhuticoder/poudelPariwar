@@ -1,14 +1,24 @@
-import { BsJournalText } from "react-icons/bs"
+import { MouseEventHandler } from "react";
+import { BsFillXCircleFill } from "react-icons/bs"
 
-const FormNotice = () => {
+type Props = {
+    onCancel: MouseEventHandler
+};
+
+const FormNotice = (props: Props) => {
     return <>
-        <div className="fixed bottom-0 w-full bg-red-400 text-white p-2 text-center z-10 flex items-center justify-center text-md md:text-xl">
-            <p className="mr-2">
-                कृपया आफ्नो जानकारी अपडेट गर्न
-            </p>
-            <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center bg-white text-black rounded p-2'>
-                <span> फारम भर्नुहोस् </span>
-            </a>
+        <div className="w-full bg-blue-400">
+            <div className="container text-white p-2 z-10 text-md md:text-xl flex justify-between items-center">
+                <p>
+                    कृपया बंशावालीमा <span className="hidden md:inline">आफ्नो वा परिवारको</span>  जानकारी अपडेट गर्न
+                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noopener noreferrer" className='ml-2 border-b-2 text-white text-md inline animate-pulse'>
+                        फारम भर्नुहोस्
+                    </a>
+                </p>
+
+                <BsFillXCircleFill className="rounded-full text-2xl cursor-pointer" onClick={props.onCancel} />
+
+            </div>
         </div>
     </>
 }

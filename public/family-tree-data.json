@@ -248,7 +248,6 @@
                                                     "bio": null
                                                 }
                                             ],
-
                                             "children": [
                                                 {
                                                     "self": {
@@ -870,10 +869,10 @@
                                                 {
                                                     "id": "pratima-luitel",
                                                     "name": "प्रतिमा लुइँटेल",
-                                                    "dob": null,
+                                                    "dob": "1994-11-11",
                                                     "dod": null,
                                                     "gender": 1,
-                                                    "bio": null
+                                                    "bio": "<b>Education</b>: Masters in English Literature, Masters in Yoga Science <br> <b>Profession</b> : Yoga Instructor <br>  <b>Address</b> : Kathmandu, Nepal <br> As a yoga instructor, I believe that staying healthy is above all achievements in life and through my profession I will always strive to make this world a better place to live."
                                                 }
                                             ]
                                         },

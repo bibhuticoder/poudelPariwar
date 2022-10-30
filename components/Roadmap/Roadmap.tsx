@@ -23,15 +23,13 @@ const RoadMap = () => {
 
         {
             title: 'Wrap Up (finalize stage 1)',
-            desc: "Finalize existing pages. Add about, contribute section. Prepare for stage 2."
+            desc: "Finalize existing stuffs. Prepare for stage 2."
         }
     ]
 
 
     return <>
-        <section id="roadmap" className="container font-Nunito">
-            <h1 className="text-5xl mb-8">Roadmap</h1>
-
+        <div className="font-Nunito">
             {steps.map((step, index) => {
                 return <div className={'flex flex-col mb-8 ' + (step.done ? 'text-gray-500' : 'text-gray-800')} key={index}>
                     <p className="text-xl flex items-center font-bold">
@@ -41,7 +39,7 @@ const RoadMap = () => {
                     <p className="text-lg pl-7">{step.desc}</p>
                 </div>
             })}
-        </section>
+        </div>
     </>
 }
 

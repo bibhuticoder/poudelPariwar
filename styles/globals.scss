@@ -8,7 +8,7 @@
 
 html,
 body {
-    @apply font-Mukta;
+    @apply font-Mukta text-black;
 }
 
 #family-tree {
@@ -58,4 +58,20 @@ body {
             }
         }
     }
+}
+
+#navbar {
+    &.fixed-nav {
+        @apply fixed top-0 left-0 w-full shadow bg-white z-10;
+    }
+
+    li {
+        &[data-active="true"] {
+            @apply text-blue-500;
+        }
+    }
+}
+
+a.site-link {
+    @apply underline text-blue-500;
 }

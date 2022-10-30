@@ -5,7 +5,7 @@ export default function Layout(props: any) {
   return (
     <>
       <Navbar />
-      <main className='mt-20'>{props.children}</main>
+      <main className='mt-2'>{props.children}</main>
       {/* <Footer /> */}
     </>
   )

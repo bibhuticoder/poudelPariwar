@@ -1,11 +1,12 @@
 import React from "react"
 import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
-import { BsCloudDownload, BsSearch } from 'react-icons/bs'
+import { BsCloudDownload, BsPersonPlus, BsSearch } from 'react-icons/bs'
 import { FamilyTreeModal } from "./FamilyTreeModal"
 import { DownloadModal } from "../DownloadModal/DownloadModal"
 import { Person } from "../../types"
 import { transformTree, searchTree, findInTreeById } from "../../utils/family-tree.util"
+import { npDigit } from "../../utils/index.utils"
 
 type Props = {
     activePersonId: String | null
@@ -108,6 +109,13 @@ export class FamilyTree extends React.Component<Props, State> {
             });
             this.setState({ treant });
 
+            setTimeout(() => {
+                if (this.familyTreeRef.current) {
+                    let div = this.familyTreeRef.current as HTMLDivElement;
+                    div.scrollLeft = div.scrollWidth / 2 - div.getBoundingClientRect().width / 2;
+                }
+            }, 500);
+
             if (typeof window !== "undefined") {
                 window.document.querySelectorAll(".person").forEach(person => {
                     person.addEventListener('click', (event) => {
@@ -158,39 +166,49 @@ export class FamilyTree extends React.Component<Props, State> {
                 backgroundSize: 'cover'
             }}>
 
-                <div className="container relative">
-                    <img src="/images/plant2.png" className="absolute transform -translate-y-full top-0 right-0 z-10 h-96" />
+                <div className="container relative hidden md:block">
+                    <img src="/images/plant2.png" className="absolute transform -translate-y-full top-0 right-0 h-100" />
                 </div>
 
 
                 <div className="mx-auto px-4">
-                    <div className="toolbar flex items-center justify-end">
+                    <div className="toolbar flex flex-wrap items-center justify-between pt-2">
 
-                        {/* search */}
-                        <div className="relative flex-grow md:max-w-xs">
-                            <div className="flex items-center border-2 border-white rounded px-2 py-1">
-                                <span className="text-gray-50">
-                                    <BsSearch />
-                                </span>
-                                <input type="text" value={this.state.searchKeyword as string} className="pl-2 outline-none w-full text-black bg-transparent" onChange={this.handleSearchKeywordChange} />
-                            </div>
-
-                            {this.state.searchResults.length > 0 &&
-                                <div className="absolute bg-gray-50 rounded z-10 w-full shadow-md">
-                                    <div className="flex flex-col">
-                                        {this.state.searchResults.map(sr =>
-                                            <div key={sr.id} onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:text-gray-900">
-                                                {sr.name}
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            }
+                        {/* info  */}
+                        <div className="text-black bg-gray-200 rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
+                            बंशावाली: वि.सं {npDigit('1823')} देखी आजसम्म
                         </div>
 
-                        {/* download */}
-                        <div>
-                            <button onClick={this.handleDownloadClick} className="bg-gray-200 border-2 rounded-md px-3 py-2 m-2" title="Download">
+                        <div className="flex items-center">
+
+                            {/* search */}
+                            <div className="relative flex-grow md:max-w-xs">
+                                <div className="flex items-center border-2 border-gray-200 rounded px-2 py-1 bg-gray-200">
+                                    <span className="text-black">
+                                        <BsSearch />
+                                    </span>
+                                    <input type="text" value={this.state.searchKeyword as string} className="pl-2 outline-none w-full text-black bg-gray-200" onChange={this.handleSearchKeywordChange} />
+                                </div>
+
+                                {this.state.searchResults.length > 0 &&
+                                    <div className="absolute bg-gray-50 rounded z-10 w-full shadow-md">
+                                        <div className="flex flex-col">
+                                            {this.state.searchResults.map(sr =>
+                                                <div key={sr.id} onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:text-gray-900">
+                                                    {sr.name}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            {/* Add entry */}
+                            <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noopener noreferrer" className="bg-gray-200 border-2 rounded-md px-3 py-2 mx-2">
+                                <BsPersonPlus />
+                            </a>
+
+                            <button onClick={this.handleDownloadClick} className="bg-gray-200 border-2 rounded-md px-3 py-2" title="Download">
                                 <BsCloudDownload />
                             </button>
                         </div>
