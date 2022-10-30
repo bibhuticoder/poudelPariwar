@@ -151,24 +151,35 @@ export class FamilyTree extends React.Component<Props, State> {
         };
 
         return (
-            <section id="chronicles" className="relative">
+            <section id="chronicles" className="rounded-md" style={{
+                backgroundImage: `url(${oldPaperImage.src})`,
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+            }}>
+
+                <div className="container relative">
+                    <img src="/images/plant2.png" className="absolute transform -translate-y-full top-0 right-0 z-10 h-96" />
+                </div>
+
+
                 <div className="mx-auto px-4">
                     <div className="toolbar flex items-center justify-end">
 
                         {/* search */}
                         <div className="relative flex-grow md:max-w-xs">
-                            <div className="flex items-center border-2 border-gray-200 rounded px-2 py-1">
-                                <span className="text-gray-300">
+                            <div className="flex items-center border-2 border-white rounded px-2 py-1">
+                                <span className="text-gray-50">
                                     <BsSearch />
                                 </span>
-                                <input type="text" value={this.state.searchKeyword as string} className="pl-2 outline-none w-full text-black" onChange={this.handleSearchKeywordChange} />
+                                <input type="text" value={this.state.searchKeyword as string} className="pl-2 outline-none w-full text-black bg-transparent" onChange={this.handleSearchKeywordChange} />
                             </div>
 
                             {this.state.searchResults.length > 0 &&
                                 <div className="absolute bg-gray-50 rounded z-10 w-full shadow-md">
                                     <div className="flex flex-col">
                                         {this.state.searchResults.map(sr =>
-                                            <div key={sr.id} onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:bg-gray-200 hover:font-bold">
+                                            <div key={sr.id} onClick={() => this.handleSearchResultChoose(sr.id)} className="cursor-pointer py-2 mx-2 my-1 text-black hover:text-gray-900">
                                                 {sr.name}
                                             </div>
                                         )}
@@ -186,12 +197,7 @@ export class FamilyTree extends React.Component<Props, State> {
                     </div>
 
                     <div className="relative overflow-x-auto">
-                        <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} style={{
-                            backgroundImage: `url(${oldPaperImage.src})`,
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            backgroundSize: 'cover'
-                        }} />
+                        <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} />
                     </div>
 
                 </div>
