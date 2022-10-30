@@ -1,14 +1,10 @@
 import React from "react"
-import { FAMILY_TREE_MODE } from "../../enums"
 import oldPaperImage from "../../public/images/old-paper.jpg"
 import { BsCloudDownload, BsPersonPlus, BsSearch } from 'react-icons/bs'
 import { FamilyTreeModal } from "./FamilyTreeModal"
 import { DownloadModal } from "../DownloadModal/DownloadModal"
 import { Person } from "../../types"
 import { transformTree, searchTree, findInTreeById } from "../../utils/family-tree.util"
-import { npDigit } from "../../utils/index.utils"
-import Image from "next/image"
-import { url } from "inspector"
 
 type Props = {
     activePersonId: String | null
@@ -182,7 +178,7 @@ export class FamilyTree extends React.Component<Props, State> {
                         {/* info  */}
                         <div className="text-black bg-gray-200 rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
                             बंशावाली: वि.सं
-                            xxxx &nbsp; 
+                            xxxx &nbsp;
                             {/* {npDigit('1823')} */}
                             देखी आजसम्म
                         </div>
@@ -223,7 +219,12 @@ export class FamilyTree extends React.Component<Props, State> {
                     </div>
 
                     <div className="relative overflow-x-auto">
-                        <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} />
+                        <div id="family-tree" ref={this.familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} >
+                            <p className="text-center text-5xl my-8 text-gray-600">
+                                <BsCloudDownload className="inline mr-4 animate-bounce" />
+                                लोड गर्दै...
+                            </p>
+                        </div>
                     </div>
 
                 </div>

@@ -31,7 +31,6 @@ export class Modal extends React.Component<Props> {
 
                 <div className="fixed  inset-0 z-20 overflow-y-auto">
                     <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-
                         <div className="relative transform overflow-hidden transition-all sm:my-8 sm:w-full sm:max-w-lg">
                             {this.props.children}
                             {backButton}
