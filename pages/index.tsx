@@ -28,8 +28,6 @@ const Home: NextPage = () => {
         <title>पौडेल परिवार</title>
       </Head>
 
-      {/* <img src="/images/tree-growth.svg" className="absolute transform -translate-x-1/2 -translate-y-28 -z-10 left-1/2 w-4/6 top-0" /> */}
-
       <section id='hero' className="container py-16 md:pt-36 md:pb-32">
         <main className='text-center md:text-left font-Mukta text-black'>
           <h1 className="text-6xl md:text-6xl font-semibold mb-12 md:mb-16">

@@ -25,7 +25,7 @@ export default function Navbar(props: any) {
     ]
 
     const [formNotice, setFormNotice] = useState<Boolean>(true);
-    const [mobileNav, setMobileNav] = useState<Boolean>(true);
+    const [mobileNav, setMobileNav] = useState<Boolean>(false);
     const router = useRouter();
 
     useEffect(() => {

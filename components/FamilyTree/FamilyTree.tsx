@@ -7,6 +7,8 @@ import { DownloadModal } from "../DownloadModal/DownloadModal"
 import { Person } from "../../types"
 import { transformTree, searchTree, findInTreeById } from "../../utils/family-tree.util"
 import { npDigit } from "../../utils/index.utils"
+import Image from "next/image"
+import { url } from "inspector"
 
 type Props = {
     activePersonId: String | null
@@ -167,7 +169,10 @@ export class FamilyTree extends React.Component<Props, State> {
             }}>
 
                 <div className="container relative hidden md:block">
-                    <img src="/images/plant2.png" className="absolute transform -translate-y-full top-0 right-0 h-100" />
+                    <div className="absolute transform -translate-y-full top-0 right-0 w-full bg-contain bg-no-repeat bg-right-top" style={{
+                        backgroundImage: 'url(/images/plant2.png)',
+                        height: '35rem'
+                    }} />
                 </div>
 
 
