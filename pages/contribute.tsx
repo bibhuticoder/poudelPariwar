@@ -1,7 +1,6 @@
 import React from "react"
 import type { NextPage } from "next"
 import Head from "next/head"
-import { useRouter } from "next/router"
 import RoadMap from "../components/Roadmap/Roadmap"
 
 const ContributePage: NextPage = () => {
@@ -33,7 +32,7 @@ const ContributePage: NextPage = () => {
 
         <div className="bg-blue-50 text-black w-full rounded p-4 font-Nunito">
           <b>Finance</b>: The project is hosted for free on
-          <a href="https://pages.cloudflare.com/" className="site-link" target="_blank" rel="noopener noreferrer"> Cloudflare Pages</a>.
+          <a href="https://pages.cloudflare.com/" className="site-link" target="_blank" > Cloudflare Pages</a>.
           Expense for the sub-domain is covered by Bibhuti Poudel. Future expenses will also be handled by team members.
         </div>
 
@@ -49,7 +48,7 @@ const ContributePage: NextPage = () => {
             <b>General</b>: Creative ideas that add value to this project are always welcome.
           </p>
           <p className="mb-4">
-            <b>Technical</b>: If you are a programmer, you can help us by improving the source code. The project is kept open-source at <a href="http://" target="_blank" rel="noopener noreferrer" className="site-link">Github</a>.
+            <b>Technical</b>: If you are a programmer, you can help us by improving the source code. The project is kept open-source at <a href="http://" target="_blank"  className="site-link">Github</a>.
             If you are a designer(UI/UX), we definitely need you help. You can reach out to me via email <a href="mailto:bibhutipd@gmail.com" className="site-link">bibhutipd@gmail.com.</a>
           </p>
 

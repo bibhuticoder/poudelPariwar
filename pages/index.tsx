@@ -1,8 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { FamilyTree } from '../components/FamilyTree/FamilyTree'
-import { FAMILY_TREE_MODE } from "../enums"
+import FamilyTree from '../components/FamilyTree/FamilyTree'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
@@ -17,13 +16,14 @@ const Home: NextPage = () => {
   }
 
   if (router.query.name) activePersonId = (router.query.name + "")
+  // console.log("active person set", activePersonId);
 
   const handleActivePersonRemove = () => {
     if (activePersonId) activePersonId = null;
   }
 
   return (
-    <div className='pb-16'>
+    <>
       <Head>
         <title>पौडेल परिवार</title>
       </Head>
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       <div className="px-0 md:px-8 mx-auto my-4 mb-16">
         <FamilyTree activePersonId={activePersonId} onActivePersonRemove={handleActivePersonRemove} />
       </div>
-    </div>
+    </>
   )
 }
 

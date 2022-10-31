@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image'
 import { Person } from "../../types";
 import oldPaperImage from "../../public/images/old-paper-piece.png"
-import { Modal } from "../Modal/Modal";
+import Modal from "../Modal/Modal";
 import parse from "html-react-parser";
 import {
     FacebookShareButton,
@@ -16,96 +16,100 @@ type Props = {
     onClose: Function
 };
 
-type State = {
-    person: Person,
-    showImage: Boolean
-};
+const FamilyTreeModal = ({ person, onClose }: Props) => {
 
-export class FamilyTreeModal extends React.Component<Props, State> {
+    const [imgFlag, setImgFLag] = useState<Boolean>(true)
+    const [profileCompleteFlag, setProfileCompleteFlag] = useState<Boolean>(false)
 
-    constructor(props: any) {
-        super(props);
-        this.state = { person: this.props.person, showImage: true };
-    }
+    useEffect(() => {
+        if (person.dob && person.bio && person.bio.length) setProfileCompleteFlag(true)
+    }, [])
 
-    handleShare = () => {
-        console.log(location.href);
-    }
 
-    render() {
-        return <>
-            <Modal backButton={true} onClose={this.props.onClose} >
-                <div className="px-4 pt-8 pb-4 sm:p-6 sm:pb-4 text-center  text-gray-700 font-Mukta" style={{
-                    backgroundImage: `url(${oldPaperImage.src})`,
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundSize: 'cover'
-                }}>
+    return <>
+        <Modal backButton={true} onClose={onClose} >
+            <div className="px-4 pt-8 pb-4 sm:p-6 sm:pb-4 text-center text-black font-Mukta" style={{
+                backgroundImage: `url(${oldPaperImage.src})`,
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+            }}>
 
-                    <div className="m-8"></div>
+                <div className="m-8"></div>
 
-                    {/* Profile Image */}
-                    {this.state.showImage &&
-                        <Image
-                            src={`/images/${this.props.person.id}.jpg` || ''}
-                            width="120"
-                            height="120"
-                            alt="फेला परेन"
-                            className="rounded-full object-cover"
-                            onError={() => { this.setState({ showImage: false }) }}
-                        />
-                    }
+                {/* Profile Image */}
+                {imgFlag &&
+                    <Image
+                        src={`/images/${person.id}.jpg` || ''}
+                        width="120"
+                        height="120"
+                        alt="फेला परेन"
+                        className="rounded-full object-cover"
+                        onError={() => setImgFLag(false)}
+                    />
+                }
 
-                    {/* Name */}
-                    <h1 className="text-4xl mt-4 font-semibold">
-                        {this.props.person.name}
-                    </h1>
+                {/* Name */}
+                <h1 className="text-4xl mt-4 font-semibold">
+                    {person.name}
+                </h1>
 
-                    {/* DOB - DOD */}
-                    {this.props.person.age &&
-                        <p className="mt-2">
+                {/* DOB - DOD */}
+                {person.age &&
+                    <p className="mt-2">
 
-                            {this.props.person.dod ? (
-                                <>
-                                    <span className="bg-gray-200 px-2 rounded-md mr-2">
-                                        {this.props.person.age.lifespan}
-                                    </span>
-
-                                    <span className="bg-gray-200 px-2 rounded-md">
-                                        {this.props.person.age.age}
-                                    </span>
-                                </>
-                            ) : (
-                                <span className="bg-gray-200 px-2 rounded-md">
-                                    {this.props.person.age}
+                        {person.dod ? (
+                            <>
+                                <span className="bg-gray-200 px-2 rounded-md mr-2">
+                                    {person.age.lifespan}
                                 </span>
-                            )}
-                        </p>
-                    }
 
-                    {/* Bio */}
-                    <p className="text-xl mt-8 max-h-80 overflow-y-auto text-left px-4 mb-4">
-                        {this.props.person.bio && parse(this.props.person.bio)}
+                                <span className="bg-gray-200 px-2 rounded-md">
+                                    {person.age.age}
+                                </span>
+                            </>
+                        ) : (
+                            <span className="bg-gray-200 px-2 rounded-md">
+                                {person.age}
+                            </span>
+                        )}
                     </p>
+                }
 
-                    {/* Share */}
-                    <div className="flex justify-center">
+                {/* Bio */}
+                <p className="text-xl mt-8 max-h-80 overflow-y-auto text-left px-4 mb-4">
+                    {person.bio && parse(person.bio)}
+                </p>
 
-                        <FacebookShareButton
-                            url={location.href}
-                            hashtag={'#bibhuti.me'}
-                        >
-                            <FacebookIcon size={32} round />
-                        </FacebookShareButton>
-                        <div className="m-2"></div>
-                        <TwitterShareButton
-                            url={location.href}
-                        >
-                            <TwitterIcon size={32} round />
-                        </TwitterShareButton>
-                    </div>
+                {/* complete profile notice */}
+                {!profileCompleteFlag ? <>
+                    <p className="my-4 text-xl">
+                        कृपया &nbsp;
+                        <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" className='site-link'>
+                            फारम भर्नुहोस्
+                        </a>&nbsp; र आफ्नो जानकारी पूरा गर्नुहोस् ।
+                    </p>
+                </> : null}
+
+                {/* Share */}
+                <div className="flex justify-center">
+
+                    <FacebookShareButton
+                        url={location.href}
+                        hashtag={'#bibhuti.me'}
+                    >
+                        <FacebookIcon size={32} round />
+                    </FacebookShareButton>
+                    <div className="m-2"></div>
+                    <TwitterShareButton
+                        url={location.href}
+                    >
+                        <TwitterIcon size={32} round />
+                    </TwitterShareButton>
                 </div>
-            </Modal>
-        </>
-    }
+            </div>
+        </Modal>
+    </>
 };
+
+export default FamilyTreeModal;

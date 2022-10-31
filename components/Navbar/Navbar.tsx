@@ -34,17 +34,17 @@ export default function Navbar(props: any) {
                 let navbar = document.querySelector("#navbar");
                 if (navbar) {
                     let navHeight = navbar.getBoundingClientRect().height;
-                    if (window.pageYOffset > navHeight * 2)
+                    if (window.pageYOffset > navHeight)
                         navbar.classList.add("fixed-nav");
                     else navbar.classList.remove("fixed-nav");
                 }
             });
         }
-    })
+    }, [])
 
     return (
         <>
-            <nav className="bg-white" id="navbar">
+            <nav className="fixed top-0 left-0 w-full bg-white z-10 transition-shadow ease-in-out duration-200" id="navbar">
                 {formNotice && <FormNotice onCancel={(e) => setFormNotice(false)} />}
 
                 <div className="container flex flex-wrap justify-between items-center mx-auto px-2 sm:px-4 py-2">
