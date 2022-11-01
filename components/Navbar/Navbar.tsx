@@ -71,7 +71,7 @@ export default function Navbar(props: any) {
 
                     {/* mobile nav */}
                     {mobileNav &&
-                        <div className="md:hidden fixed top-0 left-0 w-screen h-screen z-50 bg-gray-200 grid place-items-center">
+                        <div className="md:hidden fixed top-0 left-0 w-screen h-screen z-50 bg-gray-200 bg-opacity-95 grid place-items-center">
                             <div className="flex flex-col">
                                 <p className="text-center">
                                     <BsX className="mx-auto text-5xl" onClick={() => setMobileNav(false)} />

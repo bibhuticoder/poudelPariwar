@@ -872,7 +872,7 @@
                                                     "dob": "1994-11-11",
                                                     "dod": null,
                                                     "gender": 1,
-                                                    "bio": "<b>Education</b>: Masters in English Literature, Masters in Yoga Science <br> <b>Profession</b> : Yoga Instructor <br>  <b>Address</b> : Kathmandu, Nepal <br> As a yoga instructor, I believe that staying healthy is above all achievements in life and through my profession I will always strive to make this world a better place to live."
+                                                    "bio": "<b>Education</b>: Masters in English Literature, Masters in Yoga Science <br> <b>Profession</b> : Yoga Instructor <br>  <b>Address</b> : Kathmandu, Nepal <br><br> As a yoga instructor, I believe that staying healthy is above all achievements in life and through my profession I will always strive to make this world a better place to live."
                                                 }
                                             ]
                                         },
@@ -883,7 +883,7 @@
                                                 "dob": "1997/08/07",
                                                 "dod": null,
                                                 "gender": 0,
-                                                "bio": "\n            <b> Academic </b>: Masters in Computer Science\n            <br/>\n            <b> Profession </b>: CTO at TheValueCrew\n            <br/>\n            <b>Address </b>: Kathmandu, Nepal\n            <br/>\n            <br/>\n            I am a software developer from Kathmandu. I believe building successful software requires not only tech skills but also positive emotions & empathy.\n            I spend my free time on open source, reading & cycling.\n        "
+                                                "bio": "<b> Academic </b>: Masters in Computer Science <br/> <b> Profession </b>: CTO at TheValueCrew<br/>   <b>Address </b>: Kathmandu, Nepal    <br/><br/>  I am a software developer from Kathmandu. I believe building successful software requires not only tech skills but also positive emotions & empathy. I spend my free time on open source, reading & cycling."
                                             },
                                             "spouse": []
                                         }

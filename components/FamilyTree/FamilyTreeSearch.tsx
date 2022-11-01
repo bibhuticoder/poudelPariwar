@@ -28,11 +28,11 @@ const FamilyTreeSearch = ({ treeData = null }: Props) => {
 
 
     return <div className="relative flex-grow md:max-w-xs">
-        <div className="flex items-center border-2 border-gray-200 rounded px-2 py-1 bg-gray-200">
+        <div className="flex items-center border-2 border-gray-200 rounded px-2 py-1 bg-gray-100">
             <span className="text-black">
                 <BsSearch />
             </span>
-            <input type="text" value={keyword as string} className="pl-2 outline-none w-full text-black bg-gray-200" onChange={handleKeywordChange} />
+            <input type="text" value={keyword as string} className="pl-2 outline-none w-full text-black bg-gray-100" onChange={handleKeywordChange} />
         </div>
 
         {results.length > 0 &&

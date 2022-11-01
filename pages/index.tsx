@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import FamilyTree from '../components/FamilyTree/FamilyTree'
@@ -7,19 +7,22 @@ import { useRouter } from 'next/router'
 const Home: NextPage = () => {
 
   const router = useRouter()
-  let activePersonId: any = null;
+  const [activePersonId, setActivePersonId] = useState<String | null>(null)
 
-  if (typeof window !== "undefined") {
-    window.document.addEventListener("show-person-detail", (data: any) => {
-      router.push('?name=' + data.detail);
-    });
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.document.addEventListener("show-person-detail", (data: any) => {
+        router.push('?name=' + data.detail);
+      });
+    }
+  }, [])
 
-  if (router.query.name) activePersonId = (router.query.name + "")
-  // console.log("active person set", activePersonId);
+  useEffect(() => {
+    if (router.query.name) setActivePersonId(router.query.name + "")
+  }, [router.query])
 
   const handleActivePersonRemove = () => {
-    if (activePersonId) activePersonId = null;
+    if (activePersonId) setActivePersonId(null);
   }
 
   return (

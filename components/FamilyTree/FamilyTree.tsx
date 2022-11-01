@@ -121,7 +121,7 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
     }}>
 
         <div className="container relative hidden md:block">
-            <div className="absolute transform -translate-y-full top-0 right-0 w-full bg-contain bg-no-repeat bg-right-top" style={{
+            <div className="absolute transform -translate-y-full top-0 right-0 w-full bg-contain bg-no-repeat bg-right-top -z-10" style={{
                 backgroundImage: 'url(/images/tree-with-hands.png)',
                 height: '35rem'
             }} />
@@ -131,7 +131,7 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
             <div className="toolbar flex flex-wrap items-center justify-between pt-2">
 
                 {/* info  */}
-                <div className="text-black bg-gray-200 rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
+                <div className="text-black bg-gray-100 text-center md:text-left rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
                     बंशावाली: वि.सं
                     xxxx &nbsp;
                     {/* {npDigit('1823')} */}
@@ -144,11 +144,11 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
                     <FamilyTreeSearch treeData={treeData} />
 
                     {/* Add entry */}
-                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer"  className="bg-gray-200 border-2 rounded-md px-3 py-2 mx-2">
+                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer"  className="bg-gray-100 border-2 rounded-md px-3 py-2 mx-2">
                         <BsPersonPlus />
                     </a>
 
-                    <button onClick={() => setDownloadModal(true)} className="bg-gray-200 border-2 rounded-md px-3 py-2" title="Download">
+                    <button onClick={() => setDownloadModal(true)} className="bg-gray-100 border-2 rounded-md px-3 py-2" title="Download">
                         <BsCloudDownload />
                     </button>
                 </div>

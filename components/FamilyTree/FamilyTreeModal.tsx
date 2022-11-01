@@ -18,7 +18,7 @@ type Props = {
 
 const FamilyTreeModal = ({ person, onClose }: Props) => {
 
-    const [imgFlag, setImgFLag] = useState<Boolean>(true)
+    const [imgFlag, setImgFLag] = useState<Boolean>(false)
     const [profileCompleteFlag, setProfileCompleteFlag] = useState<Boolean>(false)
 
     useEffect(() => {
@@ -38,16 +38,14 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
                 <div className="m-8"></div>
 
                 {/* Profile Image */}
-                {imgFlag &&
-                    <Image
-                        src={`/images/${person.id}.jpg` || ''}
-                        width="120"
-                        height="120"
-                        alt="फेला परेन"
-                        className="rounded-full object-cover"
-                        onError={() => setImgFLag(false)}
-                    />
-                }
+                <Image
+                    src={`/images/${person.id}.jpg` || ''}
+                    width={imgFlag ? 120 : 0}
+                    height={imgFlag ? 120 : 0}
+                    alt="फेला परेन"
+                    className="rounded-full object-cover"
+                    onLoadingComplete={() => setImgFLag(true)}
+                />
 
                 {/* Name */}
                 <h1 className="text-4xl mt-4 font-semibold">
