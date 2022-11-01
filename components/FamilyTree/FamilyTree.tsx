@@ -128,17 +128,17 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
         </div>
 
         <div className="mx-auto px-4">
-            <div className="toolbar flex flex-wrap items-center justify-between pt-2">
+            <div className="toolbar flex flex-wrap items-center justify-between">
 
                 {/* info  */}
-                <div className="text-black bg-gray-100 text-center md:text-left rounded p-2 flex-grow mb-2 md:flex-grow-0 md:mb-0">
+                <div className="text-black bg-gray-100 text-center md:text-left rounded p-2 flex-grow mx-1 md:flex-grow-0 md:mb-0 mt-2">
                     बंशावाली: वि.सं
                     xxxx &nbsp;
                     {/* {npDigit('1823')} */}
                     देखी आजसम्म
                 </div>
 
-                <div className="flex items-center">
+                <div className="flex justify-end items-center mt-2 flex-grow">
 
                     {/* search */}
                     <FamilyTreeSearch treeData={treeData} />

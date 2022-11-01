@@ -10,6 +10,8 @@ import {
     TwitterShareButton,
     TwitterIcon,
 } from "next-share";
+import { npDigit } from "../../utils/index.utils";
+
 
 type Props = {
     person: Person,
@@ -25,10 +27,9 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
         if (person && person.dob && person.bio && person.bio.length) setProfileCompleteFlag(true)
     }, [])
 
-
     return <>
         <Modal backButton={true} onClose={onClose} >
-            <div className="px-4 pt-8 pb-4 sm:p-6 sm:pb-4 text-center text-black font-Mukta" style={{
+            <div className="px-4 pt-4 pb-4 text-center text-black font-Mukta" style={{
                 backgroundImage: `url(${oldPaperImage.src})`,
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -45,43 +46,47 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
                     alt="फेला परेन"
                     className="rounded-full object-cover"
                     onLoadingComplete={() => setImgFLag(true)}
+                    onError={() => { }}
                 />
 
                 {/* Name */}
-                <h1 className="text-4xl mt-4 font-semibold">
+                <h1 className="text-3xl md:text-4xl mt-4 font-semibold">
                     {person.name}
                 </h1>
 
-                {/* DOB - DOD */}
+                {/* DOB - DOD AGE */}
                 {person.age &&
                     <p className="mt-2">
-
-                        {person.dod ? (
-                            <>
+                        <>
+                            {person.dob ?
                                 <span className="bg-gray-200 px-2 rounded-md mr-2">
-                                    {person.age.lifespan}
+                                    {npDigit(person.dob)}
                                 </span>
+                                : null}
 
-                                <span className="bg-gray-200 px-2 rounded-md">
-                                    {person.age.age}
+                            {person.dod ?
+                                <span className="bg-gray-200 px-2 rounded-md mr-2">
+                                    {npDigit(person.dod)}
                                 </span>
-                            </>
-                        ) : (
-                            <span className="bg-gray-200 px-2 rounded-md">
-                                {person.age}
-                            </span>
-                        )}
+                                : null}
+
+                            {person.age ?
+                                <span className="bg-gray-200 px-2 rounded-md">
+                                    {npDigit(person.age.toString())}&nbsp;वर्ष
+                                </span>
+                                : null}
+                        </>
                     </p>
                 }
 
                 {/* Bio */}
-                <p className="text-xl mt-8 max-h-80 overflow-y-auto text-left px-4 mb-4">
+                <p className="text-lg md:text-xl mt-8 max-h-64 md:max-h-80 overflow-y-auto text-left px-2 md:px-4 mb-4">
                     {person.bio && parse(person.bio)}
                 </p>
 
                 {/* complete profile notice */}
                 {!profileCompleteFlag ? <>
-                    <p className="my-4 text-xl">
+                    <p className="my-4 text-lg md:text-xl">
                         कृपया &nbsp;
                         <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer" className='site-link'>
                             फारम भर्नुहोस्

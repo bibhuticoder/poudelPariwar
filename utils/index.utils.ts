@@ -18,14 +18,18 @@ const npDigit = (input: String) => {
     return result;
 }
 
-const ageByDob = (dob: string) => {
-    let diff = moment().diff(moment(dob, "YYYY/MM/DD"), "years", false);
+const calcAge = (dob: string | null, dod: string | undefined) => {
+    if (!dob) return null;
+
+    let end = dod ? moment(dod, "YYYY-MM-DD") : moment();
+    let start = moment(dob, "YYYY-MM-DD");
+    let diff = end.diff(start, "years", false);
     return diff;
 }
 
 const lifespan = (dob: string, dod: string) => {
-    let diff = moment(dod, "YYYY/MM/DD").diff(moment(dob, "YYYY/MM/DD"), "years", false);
+    let diff = moment(dod, "YYYY-MM-DD").diff(moment(dob, "YYYY-MM-DD"), "years", false);
     return diff;
 }
 
-export { npDigit, ageByDob, lifespan }
+export { npDigit, calcAge, lifespan }

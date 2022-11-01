@@ -18,7 +18,10 @@ const Home: NextPage = () => {
   }, [])
 
   useEffect(() => {
-    if (router.query.name) setActivePersonId(router.query.name + "")
+    if (router.query.name) {
+      if (activePersonId != router.query.name)
+        setActivePersonId(router.query.name + "")
+    }
   }, [router.query])
 
   const handleActivePersonRemove = () => {
