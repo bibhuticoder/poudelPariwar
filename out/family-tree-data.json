@@ -758,7 +758,8 @@
                             "self": {
                                 "id": "damodar-prasad-poudel",
                                 "name": "दामोदर प्रसाद पौडेल",
-                                "dob": null,
+                                "dob": "1944-01-01",
+                                "hasAccurateAge": false,
                                 "dod": null,
                                 "gender": 0,
                                 "bio": null

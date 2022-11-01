@@ -5,7 +5,7 @@ const Footer = () => {
                 <p className="font-Mukta">
                     © {new Date().getFullYear()} पौडेल-परिवार ™
                 </p>
-                <p className="font-Nunito mt-2 md:mt-0">
+                <p className="font-Nunito mt-2 md:mt-0 italic">
                     Designed & developed by&nbsp;
                     <a href="https://bibhuti.me/" target="_blank" rel="noopener noreferrer" className="site-link">Bibhuti Poudyal</a>
                 </p>

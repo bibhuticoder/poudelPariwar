@@ -7,11 +7,13 @@ const TRANSFORMS = {
     data: (person: Person): Person => {
 
         // DOB, DOD, AGE
-        if (person.hasAccurateAge != undefined) {
+        if (person.hasAccurateAge != undefined && person.hasAccurateAge == false) {
             if (person.dob) person.dob = person.dob?.split('-').shift() as string
             if (person.dod) person.dod = person.dod?.split('-').shift() as string
             if (person.dob && person.dod)
                 person.age = parseInt(person.dod) - parseInt(person.dob)
+            else if (person.dob && !person.dod)
+                person.age = (new Date().getFullYear()) - parseInt(person.dob)
         }
         else if (person.dob)
             person.age = calcAge(person.dob, person.dod)
