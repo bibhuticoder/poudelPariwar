@@ -21,11 +21,11 @@ It is a non-profit, open source project. Anyone from Poudel family or beyond can
 
 - [x] **Initial launch** : Prepare basic working application. Deploy it to a sub-domain. Build a form for data collection.
 
-- [] **Data collection**: Collect data for Family-Tree.
+- [ ] **Data collection**: Collect data for Family-Tree.
 
-- [] **Family history**: Gather family history and develop a separate page for it.
+- [ ] **Family history**: Gather family history and develop a separate page for it.
 
-- [] **Wrap Up (finalize stage 1)**: Finalize existing stuffs. Prepare for stage 2.
+- [ ] **Wrap Up (finalize stage 1)**: Finalize existing stuffs. Prepare for stage 2.
 
 ## Want to contribute ?
 There are few areas where we would appreciate your help.
