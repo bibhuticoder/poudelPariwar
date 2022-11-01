@@ -22,7 +22,7 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
     const [profileCompleteFlag, setProfileCompleteFlag] = useState<Boolean>(false)
 
     useEffect(() => {
-        if (person.dob && person.bio && person.bio.length) setProfileCompleteFlag(true)
+        if (person && person.dob && person.bio && person.bio.length) setProfileCompleteFlag(true)
     }, [])
 
 
