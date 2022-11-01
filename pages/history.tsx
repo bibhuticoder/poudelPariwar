@@ -29,7 +29,7 @@ const HistoryPage: NextPage = () => {
           </p>
 
           <p className='mb-8'>
-            Source: <a href="http://paudelbamsha.org.np/" className='underline text-blue-500 italic' target="_blank" >http://paudelbamsha.org.np/</a>
+            Source: <a href="http://paudelbamsha.org.np/" className='underline text-blue-500 italic' target="_blank" rel="noreferrer" >http://paudelbamsha.org.np/</a>
           </p>
 
           <p className="mb-8">

@@ -127,7 +127,6 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
             }} />
         </div>
 
-
         <div className="mx-auto px-4">
             <div className="toolbar flex flex-wrap items-center justify-between pt-2">
 
@@ -145,7 +144,7 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
                     <FamilyTreeSearch treeData={treeData} />
 
                     {/* Add entry */}
-                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank"  className="bg-gray-200 border-2 rounded-md px-3 py-2 mx-2">
+                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer"  className="bg-gray-200 border-2 rounded-md px-3 py-2 mx-2">
                         <BsPersonPlus />
                     </a>
 

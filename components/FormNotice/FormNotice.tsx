@@ -11,7 +11,7 @@ const FormNotice = (props: Props) => {
             <div className="container text-white p-2 z-10 text-md md:text-xl flex justify-between items-center">
                 <p>
                     कृपया बंशावालीमा <span className="hidden md:inline">आफ्नो वा परिवारको</span>  जानकारी अपडेट गर्न
-                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank"  className='ml-2 border-b-2 text-white text-md inline animate-pulse'>
+                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer"  className='ml-2 border-b-2 text-white text-md inline animate-pulse'>
                         फारम भर्नुहोस्
                     </a>
                 </p>

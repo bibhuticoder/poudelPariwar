@@ -85,7 +85,7 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
                 {!profileCompleteFlag ? <>
                     <p className="my-4 text-xl">
                         कृपया &nbsp;
-                        <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" className='site-link'>
+                        <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer" className='site-link'>
                             फारम भर्नुहोस्
                         </a>&nbsp; र आफ्नो जानकारी पूरा गर्नुहोस् ।
                     </p>
