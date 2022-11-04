@@ -29,7 +29,7 @@ const FamilyTreeModal = ({ person, onClose }: Props) => {
 
     return <>
         <Modal backButton={true} onClose={onClose} >
-            <div className="px-4 pt-4 pb-4 text-center text-black font-Mukta" style={{
+            <div className="px-4 pt-4 pb-4 text-center text-black font-Mukta bg-stone-500" style={{
                 backgroundImage: `url(${oldPaperImage.src})`,
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
