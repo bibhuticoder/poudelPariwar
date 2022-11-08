@@ -8,6 +8,7 @@ import { Person } from "../../types"
 import { transformTree, findInTreeById } from "../../utils/family-tree.util"
 import FamilyTreeSearch from "./FamilyTreeSearch"
 import axios from "axios"
+import { npDigit } from "../../utils/index.utils"
 
 declare var Treant: any
 type Props = {
@@ -133,9 +134,9 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
 
                 {/* info  */}
                 <div className="text-black bg-gray-100 text-center md:text-left rounded p-2 flex-grow mx-1 md:flex-grow-0 md:mb-0 mt-2">
-                    बंशावाली: वि.सं
-                    xxxx &nbsp;
-                    {/* {npDigit('1823')} */}
+                    बंशावाली: वि.सं &nbsp;
+                    {npDigit('1800')}
+                    &nbsp;
                     देखी आजसम्म
                 </div>
 
@@ -145,7 +146,7 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
                     <FamilyTreeSearch treeData={treeData} />
 
                     {/* Add entry */}
-                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer"  className="bg-gray-100 border-2 rounded-md px-3 py-2 mx-2">
+                    <a href="https://forms.gle/wekzeMbY77AZdQR56" target="_blank" rel="noreferrer" className="bg-gray-100 border-2 rounded-md px-3 py-2 mx-2">
                         <BsPersonPlus />
                     </a>
 

@@ -17,7 +17,7 @@ body {
         .person {
             @apply h-auto w-16 p-2 md:w-20 md:p-4;
             @apply rounded-md cursor-pointer text-center grid place-content-center break-words;
-            @apply bg-no-repeat bg-center bg-cover select-none bg-stone-500;
+            @apply bg-no-repeat bg-center bg-cover select-none;
             background-image: url("/images/old-paper-piece-min.png");
 
             .name {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import FamilyTree from '../components/FamilyTree/FamilyTree'
+import Timeline from '../components/Timeline/Timeline'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
@@ -33,6 +34,8 @@ const Home: NextPage = () => {
       <Head>
         <title>पौडेल परिवार</title>
       </Head>
+
+      {/* <Timeline /> */}
 
       <section id='hero' className="container py-16 md:pt-36 md:pb-32">
         <main className='text-center md:text-left font-Mukta text-black'>

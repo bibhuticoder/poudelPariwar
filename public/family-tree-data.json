@@ -1,88 +1,40 @@
 {
     "self": {
-        "id": "narahari-poudel",
-        "name": "नरहरि पौडेल",
+        "id": "dhanapati-poudel",
+        "name": "धनपती पौडेल",
         "dob": null,
         "dod": null,
         "gender": 0,
         "bio": null
     },
-    "spouse": [
-        {
-            "id": "narhari-poudel-wife",
-            "name": "",
-            "dob": null,
-            "dod": null,
-            "gender": 1,
-            "bio": null
-        }
-    ],
+    "spouse": [],
     "children": [
         {
             "self": {
-                "id": "kalidas-poudel",
-                "name": "कालीदास पौडेल",
+                "id": "dev-narayan-poudel",
+                "name": "देवनारायण पौडेल",
                 "dob": null,
                 "dod": null,
                 "gender": 0,
                 "bio": null
             },
-            "spouse": [
-                {
-                    "id": "kalidas-poudel-wife",
-                    "name": "",
-                    "dob": null,
-                    "dod": null,
-                    "gender": 1,
-                    "bio": null
-                }
-            ],
+            "spouse": [],
             "children": [
                 {
                     "self": {
-                        "id": "mokshyanath-poudel",
-                        "name": "मोक्ष्यानाथ पौडेल",
+                        "id": "basu-dev-poudel-i",
+                        "name": "वासुदेव पौडेल",
                         "dob": null,
                         "dod": null,
                         "gender": 0,
                         "bio": null
                     },
-                    "spouse": [
-                        {
-                            "id": "mokshyanath-poudel-wife",
-                            "name": "",
-                            "dob": null,
-                            "dod": null,
-                            "gender": 1,
-                            "bio": null
-                        }
-                    ]
-                },
-                {
-                    "self": {
-                        "id": "govinda-prasad-poudel",
-                        "name": "गोविन्द प्रसाद पौडेल",
-                        "dob": "1904-01-01",
-                        "dod": "1959-04-14",
-                        "hasAccurateAge": false,
-                        "gender": 0,
-                        "bio": null
-                    },
-                    "spouse": [
-                        {
-                            "id": "shiva-maya-poudel",
-                            "name": "शिवमाया पौडेल",
-                            "dob": null,
-                            "dod": null,
-                            "gender": 1,
-                            "bio": null
-                        }
-                    ],
+                    "spouse": [],
                     "children": [
                         {
                             "self": {
-                                "id": "ram-chandra-poudel",
-                                "name": "रामचन्द्र पौडेल",
+                                "id": "hari-narayan-poudel",
+                                "name": "हरिनारायण पौडेल",
                                 "dob": null,
                                 "dod": null,
                                 "gender": 0,
@@ -90,8 +42,8 @@
                             },
                             "spouse": [
                                 {
-                                    "id": "ganga-devi-poudel",
-                                    "name": "गंगादेवी पौडेल",
+                                    "id": "hari-narayan-poudel-wife",
+                                    "name": "",
                                     "dob": null,
                                     "dod": null,
                                     "gender": 1,
@@ -101,8 +53,8 @@
                             "children": [
                                 {
                                     "self": {
-                                        "id": "lava-poudel",
-                                        "name": "लभ पौडेल",
+                                        "id": "kalidas-poudel",
+                                        "name": "कालीदास पौडेल",
                                         "dob": null,
                                         "dod": null,
                                         "gender": 0,
@@ -110,463 +62,19 @@
                                     },
                                     "spouse": [
                                         {
-                                            "id": "tara-poudel",
-                                            "name": "तारा पौडेल",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "santosh-poudel",
-                                                "name": "सन्तोष पौडेल",
-                                                "dob": "1986-12-27",
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "nirmala-phuyal",
-                                                    "name": "निर्मला फुयाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "aarush-poudel",
-                                                        "name": "आरुष पौडेल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                },
-                                                {
-                                                    "self": {
-                                                        "id": "aayam-poudel",
-                                                        "name": "आयाम पौडेल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "sanjaya-poudel",
-                                                "name": "संजय पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "shraddha-phuyal",
-                                                    "name": "श्रद्धा फुयाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "siwanshi-poudel",
-                                                        "name": "शिवान्शी पौडेल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 1,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "gauri-wagle",
-                                        "name": "गौरी वाग्ले",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 1,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "hareram-wagle",
-                                            "name": "हरेराम वाग्ले",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 0,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "saru-wagle",
-                                                "name": "सरु वाग्ले",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "rupa-wagle",
-                                                "name": "रुपा वाग्ले",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "subash-sapkota",
-                                                    "name": "सुवास सापकोटा",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "rupa-subash-wagle-son",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "rupak-wagle",
-                                                "name": "रुपक वाग्ले",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "self": {
-                                "id": "lakshman-poudel",
-                                "name": "लक्ष्मण पौडेल",
-                                "dob": null,
-                                "dod": null,
-                                "gender": 0,
-                                "bio": null
-                            },
-                            "spouse": [
-                                {
-                                    "id": "kanchhi-poudel",
-                                    "name": "कान्छी पौडेल",
-                                    "dob": null,
-                                    "dod": null,
-                                    "gender": 1,
-                                    "bio": null
-                                }
-                            ],
-                            "children": [
-                                {
-                                    "self": {
-                                        "id": "puskar-poudel",
-                                        "name": "पुष्कर पौडेल",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "kamala-poudel",
-                                            "name": "कमला पौडेल",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "purusottam-poudel",
-                                                "name": "पुरुसोत्तम पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "lila-poudel",
-                                                    "name": "लिला पौडेल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "priyal-poudel",
-                                                        "name": "प्रियल पौडेल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 1,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "jaya-poudel",
-                                                "name": "जया पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "dipak-prasad-khanal",
-                                                    "name": "दीपक प्रसाद खनाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "diwa-khanal",
-                                                        "name": "दिवा खनाल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 1,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                },
-                                                {
-                                                    "self": {
-                                                        "id": "parth-khanal",
-                                                        "name": "पार्थ खनाल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "bijaya-poudel",
-                                                "name": "बिजया पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "kumar-bhandari",
-                                                    "name": "कुमार भण्डारी",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "rama-bhandari",
-                                        "name": "रमा भण्डारी",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 1,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "dilli-ram-bhandari",
-                                            "name": "दिल्ली राम भण्डारी ",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 0,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "shobha-bhandari",
-                                                "name": "शोभा भण्डारी",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "pradeep-chalise",
-                                                    "name": "प्रदीप चालिसे",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "shobha-son-1",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                },
-                                                {
-                                                    "self": {
-                                                        "id": "shobha-son-2",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "prabha-bhandari",
-                                                "name": "प्रभा भण्डारी",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "anil-baral",
-                                                    "name": "अनिल बराल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "prabha-anil-son-1",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    }
-                                                },
-                                                {
-                                                    "self": {
-                                                        "id": "prabha-anil-son-2",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "prativa-bhandari",
-                                                "name": "प्रतिभा भण्डारी",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "prativa-bhandari-husband",
-                                                    "name": "",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "durga-dhakal",
-                                        "name": "दुर्गा ढकाल",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 1,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "durga-dhakal-husband",
+                                            "id": "kalidas-poudel-wife",
                                             "name": "",
                                             "dob": null,
                                             "dod": null,
-                                            "gender": 0,
+                                            "gender": 1,
                                             "bio": null
                                         }
                                     ],
                                     "children": [
                                         {
                                             "self": {
-                                                "id": "dipeen-dhakal",
-                                                "name": "दिपीन ढकाल",
+                                                "id": "mokshyanath-poudel",
+                                                "name": "मोक्ष्यानाथ पौडेल",
                                                 "dob": null,
                                                 "dod": null,
                                                 "gender": 0,
@@ -574,8 +82,29 @@
                                             },
                                             "spouse": [
                                                 {
-                                                    "id": "shreya-dhakal",
-                                                    "name": "श्रेया ढकाल",
+                                                    "id": "mokshyanath-poudel-wife",
+                                                    "name": "",
+                                                    "dob": null,
+                                                    "dod": null,
+                                                    "gender": 1,
+                                                    "bio": null
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "self": {
+                                                "id": "govinda-prasad-poudel",
+                                                "name": "गोविन्द प्रसाद पौडेल",
+                                                "dob": "1904-01-01",
+                                                "dod": "1959-04-14",
+                                                "hasAccurateAge": false,
+                                                "gender": 0,
+                                                "bio": null
+                                            },
+                                            "spouse": [
+                                                {
+                                                    "id": "shiva-maya-poudel",
+                                                    "name": "शिवमाया पौडेल",
                                                     "dob": null,
                                                     "dod": null,
                                                     "gender": 1,
@@ -585,19 +114,982 @@
                                             "children": [
                                                 {
                                                     "self": {
-                                                        "id": "dipeen-shreeya-son-1",
-                                                        "name": "",
+                                                        "id": "ram-chandra-poudel",
+                                                        "name": "रामचन्द्र पौडेल",
                                                         "dob": null,
                                                         "dod": null,
                                                         "gender": 0,
                                                         "bio": null
                                                     },
-                                                    "spouse": []
+                                                    "spouse": [
+                                                        {
+                                                            "id": "ganga-devi-poudel",
+                                                            "name": "गंगादेवी पौडेल",
+                                                            "dob": null,
+                                                            "dod": null,
+                                                            "gender": 1,
+                                                            "bio": null
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "self": {
+                                                                "id": "lava-poudel",
+                                                                "name": "लभ पौडेल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "tara-poudel",
+                                                                    "name": "तारा पौडेल",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "santosh-poudel",
+                                                                        "name": "सन्तोष पौडेल",
+                                                                        "dob": "1986-12-27",
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "nirmala-phuyal",
+                                                                            "name": "निर्मला फुयाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "aarush-poudel",
+                                                                                "name": "आरुष पौडेल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "aayam-poudel",
+                                                                                "name": "आयाम पौडेल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "sanjaya-poudel",
+                                                                        "name": "संजय पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "shraddha-phuyal",
+                                                                            "name": "श्रद्धा फुयाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "siwanshi-poudel",
+                                                                                "name": "शिवान्शी पौडेल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 1,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "gauri-wagle",
+                                                                "name": "गौरी वाग्ले",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 1,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "hareram-wagle",
+                                                                    "name": "हरेराम वाग्ले",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 0,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "saru-wagle",
+                                                                        "name": "सरु वाग्ले",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "rupa-wagle",
+                                                                        "name": "रुपा वाग्ले",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "subash-sapkota",
+                                                                            "name": "सुवास सापकोटा",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "rupa-subash-wagle-son",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "rupak-wagle",
+                                                                        "name": "रुपक वाग्ले",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "self": {
-                                                        "id": "dipeen-shreeya-son-2",
-                                                        "name": "",
+                                                        "id": "lakshman-poudel",
+                                                        "name": "लक्ष्मण पौडेल",
+                                                        "dob": null,
+                                                        "dod": null,
+                                                        "gender": 0,
+                                                        "bio": null
+                                                    },
+                                                    "spouse": [
+                                                        {
+                                                            "id": "kanchhi-poudel",
+                                                            "name": "कान्छी पौडेल",
+                                                            "dob": null,
+                                                            "dod": null,
+                                                            "gender": 1,
+                                                            "bio": null
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "self": {
+                                                                "id": "puskar-poudel",
+                                                                "name": "पुष्कर पौडेल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "kamala-poudel",
+                                                                    "name": "कमला पौडेल",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "purusottam-poudel",
+                                                                        "name": "पुरुसोत्तम पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "lila-poudel",
+                                                                            "name": "लिला पौडेल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "priyal-poudel",
+                                                                                "name": "प्रियल पौडेल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 1,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "jaya-poudel",
+                                                                        "name": "जया पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "dipak-prasad-khanal",
+                                                                            "name": "दीपक प्रसाद खनाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "diwa-khanal",
+                                                                                "name": "दिवा खनाल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 1,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "parth-khanal",
+                                                                                "name": "पार्थ खनाल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "bijaya-poudel",
+                                                                        "name": "बिजया पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "kumar-bhandari",
+                                                                            "name": "कुमार भण्डारी",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "rama-bhandari",
+                                                                "name": "रमा भण्डारी",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 1,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "dilli-ram-bhandari",
+                                                                    "name": "दिल्ली राम भण्डारी ",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 0,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "shobha-bhandari",
+                                                                        "name": "शोभा भण्डारी",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "pradeep-chalise",
+                                                                            "name": "प्रदीप चालिसे",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "shobha-son-1",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "shobha-son-2",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "prabha-bhandari",
+                                                                        "name": "प्रभा भण्डारी",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "anil-baral",
+                                                                            "name": "अनिल बराल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "prabha-anil-son-1",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "prabha-anil-son-2",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "prativa-bhandari",
+                                                                        "name": "प्रतिभा भण्डारी",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "prativa-bhandari-husband",
+                                                                            "name": "",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "durga-dhakal",
+                                                                "name": "दुर्गा ढकाल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 1,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "durga-dhakal-husband",
+                                                                    "name": "",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 0,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "dipeen-dhakal",
+                                                                        "name": "दिपीन ढकाल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "shreya-dhakal",
+                                                                            "name": "श्रेया ढकाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "dipeen-shreeya-son-1",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "dipeen-shreeya-son-2",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "dileep-dhakal",
+                                                                        "name": "दिलीप ढकाल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "rashmi-dhakal",
+                                                                            "name": "रश्मि ढकाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ],
+                                                                    "children": [
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "nirav-dhakal",
+                                                                                "name": "नीरव ढकाल",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        },
+                                                                        {
+                                                                            "self": {
+                                                                                "id": "dipeep-rashmi-son-2",
+                                                                                "name": "",
+                                                                                "dob": null,
+                                                                                "dod": null,
+                                                                                "gender": 0,
+                                                                                "bio": null
+                                                                            },
+                                                                            "spouse": []
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "shankar-poudel",
+                                                                "name": "शंकर पौडेल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "sabitri-poudel",
+                                                                    "name": "सावित्री पौडेल",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "sabal-poudel",
+                                                                        "name": "सबल पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "salina-poudel",
+                                                                        "name": "सलिना पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "pravakar-poudel",
+                                                                "name": "प्रभाकर पौडेल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "dhana-poudel",
+                                                                    "name": "धन पौडेल",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "shraddha-poudel",
+                                                                        "name": "श्रद्धा पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "shreeya-poudel",
+                                                                        "name": "श्रीया पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "aditya-poudel",
+                                                                        "name": "आदित्य पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "self": {
+                                                        "id": "damodar-prasad-poudel",
+                                                        "name": "दामोदर प्रसाद पौडेल",
+                                                        "dob": "1945-02-12",
+                                                        "hasAccurateAge": false,
+                                                        "dod": null,
+                                                        "gender": 0,
+                                                        "bio": null
+                                                    },
+                                                    "spouse": [
+                                                        {
+                                                            "id": "bhawani-poudel",
+                                                            "name": "भवानी पौडेल",
+                                                            "dob": "1947-08-20",
+                                                            "dod": null,
+                                                            "gender": 1,
+                                                            "bio": null
+                                                        }
+                                                    ],
+                                                    "children": [
+                                                        {
+                                                            "self": {
+                                                                "id": "laxmi-bhattrai",
+                                                                "name": "लक्ष्मी भट्टराई",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 1,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "shardul-bhattrai",
+                                                                    "name": "शार्दुल भट्टराई",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "gaurav-bhattrai",
+                                                                        "name": "गौरव भट्टराई",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "nilam-shahi",
+                                                                            "name": "निलम शाही",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "saurav-bhattrai",
+                                                                        "name": "सौरब भट्टराई",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "manisha-silwal",
+                                                                            "name": "मनीषा सिलवाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "basu-dev-poudel-ii",
+                                                                "name": "बासु देव पौडेल",
+                                                                "dob": "1966-12-31",
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "binu-gautam-poudel",
+                                                                    "name": "बिनु गौतम पौडेल",
+                                                                    "dob": "1971-06-15",
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "biranchi-poudel",
+                                                                        "name": "बिरन्ची पौडेल",
+                                                                        "dob": "1994-10-06",
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": "\n        <b> Academics </b>: Masters in English Literature & International Relation\n        <br/>\n        <b> Profession </b>: Freelance Writer & Senior Researcher at Pioneer Research Center Nepal\n        <br/>\n        <b> Address </b>: Kathmandu, Nepal\n\n        <br/>\n        <br/>\n        I am a social science researcher and a writing entrepreneur with good publication profile in national and international platforms.\n        "
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "pratima-luitel",
+                                                                            "name": "प्रतिमा लुइँटेल",
+                                                                            "dob": "1994-11-11",
+                                                                            "dod": null,
+                                                                            "gender": 1,
+                                                                            "bio": "<b>Education</b>: Masters in English Literature, Masters in Yoga Science <br> <b>Profession</b> : Yoga Instructor <br>  <b>Address</b> : Kathmandu, Nepal <br><br> As a yoga instructor, I believe that staying healthy is above all achievements in life and through my profession I will always strive to make this world a better place to live."
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "bibhuti-poudel",
+                                                                        "name": "विभूति पौडेल",
+                                                                        "dob": "1997-08-07",
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": "<b> Academic </b>: Masters in Computer Science <br/> <b> Profession </b>: CTO at TheValueCrew<br/>   <b>Address </b>: Kathmandu, Nepal    <br/><br/>  I am a software developer from Kathmandu. I believe building successful software requires not only tech skills but also positive emotions & empathy. I spend my free time on open source, reading & cycling."
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "binu-khanal",
+                                                                "name": "बिनु खनाल",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 1,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "umesh-khanal",
+                                                                    "name": "उमेश खनाल",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 0,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "subina-khanal",
+                                                                        "name": "सुबिना खनाल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "sashi-raj-pandey",
+                                                                            "name": "सशी राज पाण्डे",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "rubina-khanal",
+                                                                        "name": "रुबिना खनाल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "diwakar-poudel",
+                                                                "name": "दिवाकर पौडेल",
+                                                                "dob": "1973-07-17",
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "bhawani-dawadi-poudel",
+                                                                    "name": "भवानी दवाडी (दीपा पौडेल)",
+                                                                    "dob": "1977-09-21",
+                                                                    "dod": null,
+                                                                    "gender": 1,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "dikshya-poudel",
+                                                                        "name": "दिक्ष्या पौडेल",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "prawin-khanal",
+                                                                            "name": "प्रविन खनाल",
+                                                                            "dob": null,
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": null
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "dristi-poudel",
+                                                                        "name": "द्रिश्टी पौडेल",
+                                                                        "dob": "2001-04-24",
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": "\n        <b> Education </b>: Business in Business Studies\n        <br/>\n        <b> Profession</b>: Internship in Nic Asia Bank\n        <br/>\n        <br/>\n        I am a kind hearted person who believes in humanistic philosophy.\n        "
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "dikshyant-poudel",
+                                                                        "name": "दिक्ष्यंत पौडेल",
+                                                                        "dob": "2007-02-28",
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "self": {
+                                                                "id": "sarala-poudel-subedi",
+                                                                "name": "सरला पौडेल सुवेदी",
+                                                                "dob": null,
+                                                                "dod": null,
+                                                                "gender": 0,
+                                                                "bio": null
+                                                            },
+                                                            "spouse": [
+                                                                {
+                                                                    "id": "chandra-subedi",
+                                                                    "name": "चन्द्र सुवेदी",
+                                                                    "dob": null,
+                                                                    "dod": null,
+                                                                    "gender": 0,
+                                                                    "bio": null
+                                                                }
+                                                            ],
+                                                            "children": [
+                                                                {
+                                                                    "self": {
+                                                                        "id": "sarthak-subedi",
+                                                                        "name": "सार्थक सुवेदी",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 0,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                },
+                                                                {
+                                                                    "self": {
+                                                                        "id": "sara-subedi",
+                                                                        "name": "सारा सुवेदी",
+                                                                        "dob": null,
+                                                                        "dod": null,
+                                                                        "gender": 1,
+                                                                        "bio": null
+                                                                    },
+                                                                    "spouse": []
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "self": {
+                                                        "id": "narayan-poudel",
+                                                        "name": "नारायण प्रसाद पौडेल",
                                                         "dob": null,
                                                         "dod": null,
                                                         "gender": 0,
@@ -606,463 +1098,10 @@
                                                     "spouse": []
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "dileep-dhakal",
-                                                "name": "दिलीप ढकाल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "rashmi-dhakal",
-                                                    "name": "रश्मि ढकाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ],
-                                            "children": [
-                                                {
-                                                    "self": {
-                                                        "id": "nirav-dhakal",
-                                                        "name": "नीरव ढकाल",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                },
-                                                {
-                                                    "self": {
-                                                        "id": "dipeep-rashmi-son-2",
-                                                        "name": "",
-                                                        "dob": null,
-                                                        "dod": null,
-                                                        "gender": 0,
-                                                        "bio": null
-                                                    },
-                                                    "spouse": []
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "shankar-poudel",
-                                        "name": "शंकर पौडेल",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "sabitri-poudel",
-                                            "name": "सावित्री पौडेल",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "sabal-poudel",
-                                                "name": "सबल पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "salina-poudel",
-                                                "name": "सलिना पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "pravakar-poudel",
-                                        "name": "प्रभाकर पौडेल",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "dhana-poudel",
-                                            "name": "धन पौडेल",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "shraddha-poudel",
-                                                "name": "श्रद्धा पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "shreeya-poudel",
-                                                "name": "श्रीया पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "aditya-poudel",
-                                                "name": "आदित्य पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": []
                                         }
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "self": {
-                                "id": "damodar-prasad-poudel",
-                                "name": "दामोदर प्रसाद पौडेल",
-                                "dob": "1945-02-12",
-                                "hasAccurateAge": false,
-                                "dod": null,
-                                "gender": 0,
-                                "bio": null
-                            },
-                            "spouse": [
-                                {
-                                    "id": "bhawani-poudel",
-                                    "name": "भवानी पौडेल",
-                                    "dob": "1947-08-20",
-                                    "dod": null,
-                                    "gender": 1,
-                                    "bio": null
-                                }
-                            ],
-                            "children": [
-                                {
-                                    "self": {
-                                        "id": "laxmi-bhattrai",
-                                        "name": "लक्ष्मी भट्टराई",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 1,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "shardul-bhattrai",
-                                            "name": "शार्दुल भट्टराई",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "gaurav-bhattrai",
-                                                "name": "गौरव भट्टराई",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "nilam-shahi",
-                                                    "name": "निलम शाही",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "saurav-bhattrai",
-                                                "name": "सौरब भट्टराई",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "manisha-silwal",
-                                                    "name": "मनीषा सिलवाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "basu-dev-poudel",
-                                        "name": "बासु देव पौडेल",
-                                        "dob": "1966-12-31",
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "binu-gautam-poudel",
-                                            "name": "बिनु गौतम पौडेल",
-                                            "dob": "1971-06-15",
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "biranchi-poudel",
-                                                "name": "बिरन्ची पौडेल",
-                                                "dob": "1994-10-06",
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": "\n        <b> Academics </b>: Masters in English Literature & International Relation\n        <br/>\n        <b> Profession </b>: Freelance Writer & Senior Researcher at Pioneer Research Center Nepal\n        <br/>\n        <b> Address </b>: Kathmandu, Nepal\n\n        <br/>\n        <br/>\n        I am a social science researcher and a writing entrepreneur with good publication profile in national and international platforms.\n        "
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "pratima-luitel",
-                                                    "name": "प्रतिमा लुइँटेल",
-                                                    "dob": "1994-11-11",
-                                                    "dod": null,
-                                                    "gender": 1,
-                                                    "bio": "<b>Education</b>: Masters in English Literature, Masters in Yoga Science <br> <b>Profession</b> : Yoga Instructor <br>  <b>Address</b> : Kathmandu, Nepal <br><br> As a yoga instructor, I believe that staying healthy is above all achievements in life and through my profession I will always strive to make this world a better place to live."
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "bibhuti-poudel",
-                                                "name": "विभूति पौडेल",
-                                                "dob": "1997-08-07",
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": "<b> Academic </b>: Masters in Computer Science <br/> <b> Profession </b>: CTO at TheValueCrew<br/>   <b>Address </b>: Kathmandu, Nepal    <br/><br/>  I am a software developer from Kathmandu. I believe building successful software requires not only tech skills but also positive emotions & empathy. I spend my free time on open source, reading & cycling."
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "binu-khanal",
-                                        "name": "बिनु खनाल",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 1,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "umesh-khanal",
-                                            "name": "उमेश खनाल",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 0,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "subina-khanal",
-                                                "name": "सुबिना खनाल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "sashi-raj-pandey",
-                                                    "name": "सशी राज पाण्डे",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "rubina-khanal",
-                                                "name": "रुबिना खनाल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "diwakar-poudel",
-                                        "name": "दिवाकर पौडेल",
-                                        "dob": "1973-07-17",
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "bhawani-dawadi-poudel",
-                                            "name": "भवानी दवाडी (दीपा पौडेल)",
-                                            "dob": "1977-09-21",
-                                            "dod": null,
-                                            "gender": 1,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "dikshya-poudel",
-                                                "name": "दिक्ष्या पौडेल",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": [
-                                                {
-                                                    "id": "prawin-khanal",
-                                                    "name": "प्रविन खनाल",
-                                                    "dob": null,
-                                                    "dod": null,
-                                                    "gender": 0,
-                                                    "bio": null
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "dristi-poudel",
-                                                "name": "द्रिश्टी पौडेल",
-                                                "dob": "2001-04-24",
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": "\n        <b> Education </b>: Business in Business Studies\n        <br/>\n        <b> Profession</b>: Internship in Nic Asia Bank\n        <br/>\n        <br/>\n        I am a kind hearted person who believes in humanistic philosophy.\n        "
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "dikshyant-poudel",
-                                                "name": "दिक्ष्यंत पौडेल",
-                                                "dob": "2007-02-28",
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                },
-                                {
-                                    "self": {
-                                        "id": "sarala-poudel-subedi",
-                                        "name": "सरला पौडेल सुवेदी",
-                                        "dob": null,
-                                        "dod": null,
-                                        "gender": 0,
-                                        "bio": null
-                                    },
-                                    "spouse": [
-                                        {
-                                            "id": "chandra-subedi",
-                                            "name": "चन्द्र सुवेदी",
-                                            "dob": null,
-                                            "dod": null,
-                                            "gender": 0,
-                                            "bio": null
-                                        }
-                                    ],
-                                    "children": [
-                                        {
-                                            "self": {
-                                                "id": "sarthak-subedi",
-                                                "name": "सार्थक सुवेदी",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 0,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        },
-                                        {
-                                            "self": {
-                                                "id": "sara-subedi",
-                                                "name": "सारा सुवेदी",
-                                                "dob": null,
-                                                "dod": null,
-                                                "gender": 1,
-                                                "bio": null
-                                            },
-                                            "spouse": []
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "self": {
-                                "id": "narayan-poudel",
-                                "name": "नारायण प्रसाद पौडेल",
-                                "dob": null,
-                                "dod": null,
-                                "gender": 0,
-                                "bio": null
-                            },
-                            "spouse": []
                         }
                     ]
                 }
