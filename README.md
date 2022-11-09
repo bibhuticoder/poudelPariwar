@@ -1,10 +1,10 @@
 # पौडेल परिवार
 
-यस पृष्ठमा भद्रबास र वरिपरिका निवासी पौडेल परिवार तथा उनीहरुका इस्टमित्रहरु को जानकारी समावेश गरिएको छ ।
+यस repo मा पौडेल परिवार तथा उनीहरुको वंशज को जानकारी समावेश गरिएको छ ।
 
-नयाँ पुस्ताहरूलाई उनीहरूको पारिवारिक इतिहास र परिवारका सदस्यहरूको बारेमा थप जान्नको लागि यसले सन्दर्भको रूपमा सेवा गर्ने लक्ष्य राख्छ ।
+नयाँ पुस्ताहरूलाई पारिवारिक इतिहास र परिवारका सदस्यहरूको बारेमा थप जान्नको लागि यसले यसले मद्दत गर्नेछ ।
 
-It is a non-profit, open source project. Anyone from Poudel family or beyond can contribute to this project.
+It is a non-profit, open source project. Anyone from Poudel family or beyond can contribute to this endeavour.
 
 ## Team behind the project
 
