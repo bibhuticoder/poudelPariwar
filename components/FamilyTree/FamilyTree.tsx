@@ -9,6 +9,8 @@ import { transformTree, findInTreeById } from "../../utils/family-tree.util"
 import FamilyTreeSearch from "./FamilyTreeSearch"
 import axios from "axios"
 import { npDigit } from "../../utils/index.utils"
+import { treeChartConfig } from "./FamilyTree.helper"
+import Draggable from "./Draggable"
 
 declare var Treant: any
 type Props = {
@@ -17,7 +19,6 @@ type Props = {
 }
 
 const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
-    const familyTreeRef = React.createRef()
     let treant: any = null
     const [downloadModal, setDownloadModal] = useState<Boolean>(false)
     const [activePerson, setActivePerson] = useState<Person | null>(null)
@@ -27,39 +28,22 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
         if (Treant && treeData && !treant) {
 
             treant = new Treant({
-                chart: {
-                    container: "#family-tree",
-                    levelSeparation: 50,
-                    nodeAlign: 'BOTTOM',
-                    rootOrientation: 'NORTH',
-
-                    connectors: {
-                        type: "step",
-
-                        style: {
-                            "arrow-end": "open-wide-medium",
-                            "stroke": "#998B70",
-                            "stroke-dasharray": "-", //"", "-", ".", "-.", "-..", ". ", "- ", "--", "- .", "--.", "--.."
-                            "stroke-width": "2.5",
-                            "stroke-linecap": "round",
-                            "stroke-linejoin": "round"
-                        },
-                    },
-                    node: { HTMLclass: "node" },
-                },
+                chart: treeChartConfig,
                 nodeStructure: transformTree(treeData)
 
             }, () => {
                 if (callback) callback()
 
+                let familyTreeElem = document.querySelector("#family-tree")
+
                 // scroll to mid section
-                if (familyTreeRef.current) {
-                    let div = familyTreeRef.current as HTMLDivElement;
-                    div.scrollLeft = div.scrollWidth / 2 - div.getBoundingClientRect().width / 2;
+                if (familyTreeElem) {
+                    familyTreeElem.scrollLeft = familyTreeElem.scrollWidth / 2 - familyTreeElem.getBoundingClientRect().width / 2
                 }
 
-                //  attach event handler
+                //  attach event handlers
                 if (typeof window !== "undefined") {
+                    // click on individual person
                     window.document.querySelectorAll(".person").forEach(person => {
                         person.addEventListener('click', (event) => {
                             let id = person.getAttribute("id");
@@ -68,7 +52,7 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
                     })
                 }
             });
-        };
+        }
     }
 
     const handleModalClose = () => {
@@ -129,8 +113,8 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
             }} />
         </div>
 
-        <div className="mx-auto px-4">
-            <div className="toolbar flex flex-wrap items-center justify-between">
+        <div className="mx-auto">
+            <div className="toolbar px-4 flex flex-wrap items-center justify-between">
 
                 {/* info  */}
                 <div className="text-black bg-gray-100 text-center md:text-left rounded p-2 flex-grow mx-1 md:flex-grow-0 md:mb-0 mt-2">
@@ -156,17 +140,16 @@ const FamilyTree = ({ activePersonId, onActivePersonRemove }: Props) => {
                 </div>
             </div>
 
-            <div className="relative overflow-x-auto">
-                <div id="family-tree" ref={familyTreeRef as React.RefObject<HTMLDivElement>} className={treeClass()} >
+            <div className="relative overflow-x-auto cursor-grab">
+                <Draggable id="family-tree" customClass={treeClass()} >
                     <FaCircleNotch className="text-5xl my-16 mx-auto text-gray-500 animate-spin" />
-                </div>
+                </Draggable>
             </div>
-
         </div>
 
         {activePerson && <FamilyTreeModal person={activePerson} onClose={handleModalClose} />}
 
-        {downloadModal && <DownloadModal familyTreeRef={familyTreeRef.current} onClose={() => setDownloadModal(false)} />}
+        {downloadModal && <DownloadModal familyTreeElemId="family-tree" onClose={() => setDownloadModal(false)} />}
     </section>
 }
 

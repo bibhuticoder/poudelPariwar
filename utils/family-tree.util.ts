@@ -1,6 +1,7 @@
-import { Person, TreeItem } from "../types";
-import { npDigit, calcAge, lifespan } from "./index.utils";
-import * as DOMPurify from 'dompurify';
+import { Person, TreeItem } from "../types"
+import { npDigit, calcAge, lifespan, toBs } from "./index.utils"
+import * as DOMPurify from 'dompurify'
+
 
 const TRANSFORMS = {
 
@@ -15,13 +16,17 @@ const TRANSFORMS = {
             else if (person.dob && !person.dod)
                 person.age = (new Date().getFullYear()) - parseInt(person.dob)
         }
-        else if (person.dob)
+        else if (person.dob) {
             person.age = calcAge(person.dob, person.dod)
+            person.dob = toBs(person.dob)
+        }
+
+        if(person.dod) person.dod = toBs(person.dod)
 
         // BIO
         if (person.bio)
-            person.bio = DOMPurify.sanitize(person.bio);
-        else person.bio = "";
+            person.bio = DOMPurify.sanitize(person.bio)
+        else person.bio = ""
 
         return person;
     },
@@ -31,23 +36,23 @@ const TRANSFORMS = {
         let html = `<div class="person-group ${item.spouse && item.spouse.length ? '--married' : '--unmarried'}">`;
 
         const buildPerson = (person: Person) => {
-            let html = `<div class="person" id="${person.id}">`;
-            html += `<p class="name">${person.name}</p>`;
-            html += `</div>`;
-            return html;
+            let html = `<div class="person" id="${person.id}">`
+            html += `<p class="name">${person.name}</p>`
+            html += `</div>`
+            return html
         }
 
         // SELF + SPOUSEs
         if (item.self)
-            html += buildPerson(item.self);
+            html += buildPerson(item.self)
         if (item.spouse && item.spouse.length) {
             for (let i = 0; i < item.spouse.length; i++) {
-                if (item.spouse[i]) html += buildPerson(item.spouse[i]);
+                if (item.spouse[i]) html += buildPerson(item.spouse[i])
             }
         }
 
         // CONTAINER END
-        html += `</div>`;
+        html += `</div>`
 
         return html;
     }

@@ -50,6 +50,11 @@ body {
             }
         }
     }
+
+    svg {
+        background-size: 1rem 1rem;
+        background-image: radial-gradient(circle, rgb(120 113 108) 0.05px, rgba(0, 0, 0, 0) 1px);
+    }
 }
 
 #navbar {

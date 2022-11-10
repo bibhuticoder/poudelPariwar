@@ -5,7 +5,7 @@ import Modal from "../Modal/Modal"
 import { BsCloudDownload } from 'react-icons/bs'
 
 type Props = {
-    familyTreeRef: any | null
+    familyTreeElemId: string
     onClose: Function | null
 };
 
@@ -13,21 +13,23 @@ type State = {
     loading: Boolean;
 };
 
-const DownloadModal = ({ familyTreeRef = null, onClose = null }: Props) => {
+const DownloadModal = ({ familyTreeElemId = 'family-tree', onClose = null }: Props) => {
     const [loading, setLoading] = useState(false);
 
     const download = () => {
         setLoading(true);
-        let node = familyTreeRef as any;
-        domtoimage.toBlob(node, { width: node.scrollWidth, height: node.scrollHeight })
-            .then((blob: any) => {
-                saveAs(blob, 'poudyal-pariwar-tree.png');
-                setLoading(false);
-            })
-            .catch((error: any) => {
-                console.error('oops, something went wrong!', error);
-                setLoading(false);
-            });
+        let node = document.querySelector(`#${familyTreeElemId}`);
+        if (node)
+            domtoimage.toBlob(node, { width: node.scrollWidth, height: node.scrollHeight })
+                .then((blob: any) => {
+                    saveAs(blob, 'poudyal-pariwar-tree.png');
+                    setLoading(false);
+                })
+                .catch((error: any) => {
+                    console.error('oops, something went wrong!', error);
+                    setLoading(false);
+                });
+        else console.log(node)
     }
 
 

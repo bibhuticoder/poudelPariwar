@@ -1,4 +1,5 @@
 import moment from "moment";
+import adBs from "ad-bs-converter"
 
 const npDigit = (input: String) => {
     if (!input) return null;
@@ -32,4 +33,12 @@ const lifespan = (dob: string, dod: string) => {
     return diff;
 }
 
-export { npDigit, calcAge, lifespan }
+const toBs = (date: string) => {
+    let converted = adBs.ad2bs(date);
+    if (converted && converted.ne) {
+        return `${converted.ne.strMonth} ${converted.ne.month}, ${converted.ne.year}`
+    }
+    return date;
+}
+
+export { npDigit, calcAge, lifespan, toBs }
