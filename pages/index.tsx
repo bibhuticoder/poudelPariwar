@@ -4,6 +4,7 @@ import Head from 'next/head'
 import FamilyTree from '../components/FamilyTree/FamilyTree'
 import Timeline from '../components/Timeline/Timeline'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
 
@@ -35,7 +36,6 @@ const Home: NextPage = () => {
         <title>पौडेल परिवार</title>
       </Head>
 
-      {/* <Timeline /> */}
 
       <section id='hero' className="container py-16 md:pt-36 md:pb-32">
         <main className='text-center md:text-left font-Mukta text-black'>
@@ -55,6 +55,23 @@ const Home: NextPage = () => {
       <div className="px-0 md:px-8 mx-auto my-4 mb-16">
         <FamilyTree activePersonId={activePersonId} onActivePersonRemove={handleActivePersonRemove} />
       </div>
+
+
+      <div className="container">
+        <h1 className='text-5xl text-center mb-8 md:text-left md:text-5xl'> इतिहासका प्रमुख घटनाहरू </h1>
+
+        <p className="text-2xl mb-16 text-center md:text-left">
+          आजको अवस्था सम्म आइपुग्न विभिन्न घटनाहरुको योगदान छ । थुप्रै स्रोतहरु आध्यान गरि हामीले ती घटनाहरुलाई श्रृंखलाबद्ध रुपमा प्रस्तुत गरेका छौ ।
+          विस्तृत जानकारीको लागी &nbsp;
+          <Link href="/history">
+            <a className='site-link'>इतिहास</a>
+          </Link>
+          &nbsp; पृष्ठमा जानुहोला ।
+        </p>
+
+      </div>
+      <Timeline />
+
     </>
   )
 }

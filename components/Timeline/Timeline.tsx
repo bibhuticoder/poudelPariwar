@@ -14,17 +14,7 @@ type Props = {
 
 const TimelineUnit = ({ eventItem, align }: Props) => {
 
-    const event = <div className={`h-auto w-72 bg-cover bg-center px-8 text-justify py-4 text-gray-600 text-md transform ${align ? '' : '-'}translate-x-full`} style={{
-        backgroundImage: `url(${OldPaper.src})`
-    }}>
-        {eventItem.event}
-    </div>
-
-    const rod = <div className={`h-2 w-96 ${align ? 'rounded-l' : 'rounded-r'} bg-repeat bg-fill shadow`} style={{
-        backgroundImage: `url(${WoodTexture.src})`
-    }} />
-
-    const date = <div className="w-36 h-20 rounded-xl p-2 font-bold transformtranslate-x-44 my-4" style={{
+    const date = <div className="hidden w-36 h-20 rounded-xl p-2 font-bold my-4 md:block" style={{
         backgroundImage: `url(${WoodTexture.src})`
     }}>
         <div className="bg-white text-stone-500 w-full h-full text-xl rounded-xl grid place-items-center">
@@ -32,9 +22,45 @@ const TimelineUnit = ({ eventItem, align }: Props) => {
         </div>
     </div>
 
+    const event = <div className={`
+        h-auto 
+        w-72 
+        bg-cover 
+        bg-center 
+        px-8 
+        text-justify 
+        py-4 
+        text-gray-600 
+        text-lg
+        md:absolute 
+        md:left-1/2 
+        md:top-1/2 
+        md:transform 
+        md:-translate-x-1/2 
+        md:-translate-y-1/2
+    `}
+        style={{
+            backgroundImage: `url(${OldPaper.src})`
+        }}>
+        {/* in mobile show date inside event */}
+        <h2 className="inline-block w-full md:hidden text-xl font-bold text-center underline mb-4">
+            {eventItem.date}
+        </h2>
+
+        <p> {eventItem.event} </p>
+    </div>
+
+
+    // hide on mobile
+    const rod = <div className={`hidden relative h-2 w-80 ${align ? 'rounded-l' : 'rounded-r'} bg-repeat bg-fill md:block`} style={{
+        backgroundImage: `url(${WoodTexture.src})`
+    }}>
+        {event}
+    </div>
+
     return align
-        ? <> <div className="flex items-center my-8 transform translate-x-20"> {event} {rod} {date} </div> </>
-        : <> <div className="flex items-center my-8 transform -translate-x-20 translate-y-full "> {date} {rod} {event} </div> </>
+        ? <> <div className="flex items-center md:self-start self-center md:my-16 my-6"> {rod} {date} <div className="block md:hidden">{event}</div> </div> </>
+        : <> <div className="flex items-center md:self-end self-center md:my-16 my-6"> {date} {rod} <div className="block md:hidden">{event}</div> </div> </>
 }
 
 const Timeline = () => {
@@ -42,6 +68,15 @@ const Timeline = () => {
     const events: TimelineEvent[] = [
         {
             date: "इ. पू. १५०",
+            event: "पौडेलहरु बाहुन, क्षेत्रीका अतिरिक्त अनेक जात र वर्गमा विभाजित छन् । तर पनि पौडेलहरुको एउटै गोत्र आत्रेय र प्रवर पनि आत्रेय, अर्चनाना, श्यावाश्व त्रिप्रवर नै हो ।"
+        },
+
+        {
+            date: "इ. पू. १५०",
+            event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
+        },
+        {
+            date: "इ. पू. १५०",
             event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
         },
 
@@ -49,56 +84,39 @@ const Timeline = () => {
             date: "इ. पू. १५०",
             event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
         },
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // },
+        {
+            date: "इ. पू. १५०",
+            event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
+        },
 
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // },
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // },
+        {
+            date: "इ. पू. १५०",
+            event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
+        },
+        {
+            date: "इ. पू. १५०",
+            event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
+        },
 
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // },
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // },
-
-        // {
-        //     date: "इ. पू. १५०",
-        //     event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
-        // }
+        {
+            date: "इ. पू. १५०",
+            event: "पौडी गढवालबाट आएका हुनाले यिनको वंश - पौडी+ आलय ) पौडयालय कहलिन थाल्यो । कालान्तरमा पौडयालयबाट पौडयाल र पौडेल थरको विकास भएको पाइन्छ ।"
+        }
     ]
 
-    const left = events.filter((e, i) => i % 2 == 0)
-    const right = events.filter((e, i) => i % 2 !== 0)
-
     return <>
-        <div className="flex flex-nowrap justify-center">
+        {/* 20(rod) + 9(date) + 20(rod) = 49 */}
+        <div className="relative w-full md:w-[49rem] md:mx-auto">
 
-            {/* left */}
+            {/* events */}
             <div className="flex flex-col">
-                {left.map((eventItem, i) => <TimelineUnit align={true} eventItem={eventItem} key={i} />)}
+                {events.map((eventItem, i) => <TimelineUnit align={(i + 1) % 2 == 0} eventItem={eventItem} key={i} />)}
             </div>
 
             {/* rod */}
-            <div className="w-3 bg-repeat bg-fill rounded-xl shadow py-40" style={{
+            <div className="w-3 h-full -z-10 bg-repeat bg-fill rounded-xl shadow py-40 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{
                 backgroundImage: `url(${WoodTextureFlip.src})`
-            }}
-            />
-
-            {/* right */}
-            <div className="flex flex-col">
-                {right.map((eventItem, i) => <TimelineUnit align={false} eventItem={eventItem} key={i} />)}
-            </div>
+            }} />
         </div>
     </>
 }
