@@ -5,6 +5,7 @@ import FamilyTree from '../components/FamilyTree/FamilyTree'
 import Timeline from '../components/Timeline/Timeline'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import timelineBg from "../public/images/timeline-back.png"
 
 const Home: NextPage = () => {
 
@@ -68,9 +69,14 @@ const Home: NextPage = () => {
           </Link>
           &nbsp; पृष्ठमा जानुहोला ।
         </p>
+      </div>
+
+      <div className='bg-auto bg-center bg-repeat bg-opacity-100' style={{
+        backgroundImage: `url(${timelineBg.src})`
+      }}>
+        <Timeline />
 
       </div>
-      <Timeline />
 
     </>
   )

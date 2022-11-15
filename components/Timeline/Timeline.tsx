@@ -14,7 +14,7 @@ type Props = {
 
 const TimelineUnit = ({ eventItem, align }: Props) => {
 
-    const date = <div className="hidden shadow-md shadow-black w-28 h-16 text-center rounded-xl p-1.5 font-bold my-4 md:block break-words" style={{
+    const date = <div className="hidden shadow-md shadow-black w-28 h-16 text-center rounded-xl p-1.5 font-bold my-4 md:block break-words z-10" style={{
         backgroundImage: `url(${WoodTexture.src})`
     }}>
         <div className="bg-white text-stone-500 w-full h-full text-lg rounded-xl grid place-items-center">
@@ -129,7 +129,7 @@ const Timeline = () => {
             </div>
 
             {/* rod */}
-            <div className="w-3 h-full -z-10 bg-repeat bg-fill rounded-xl shadow-md shadow-black py-40 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{
+            <div className="hidden md:block w-3 h-full bg-repeat bg-fill rounded-xl shadow-md shadow-black py-40 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" style={{
                 backgroundImage: `url(${WoodTextureFlip.src})`
             }} />
         </div>
