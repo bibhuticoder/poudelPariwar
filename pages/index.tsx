@@ -71,11 +71,13 @@ const Home: NextPage = () => {
         </p>
       </div>
 
-      <div className='bg-auto bg-center md:bg-left bg-repeat bg-opacity-100' style={{
-        backgroundImage: `url(${timelineBg.src})`
-      }}>
+      <div className="relative">
         <Timeline />
+        <div className='absolute h-full w-full top-0 left-0 -z-10 bg-auto bg-center md:bg-left bg-repeat opacity-40' style={{
+          backgroundImage: `url(${timelineBg.src})`
+        }}>
 
+        </div>
       </div>
 
     </>
