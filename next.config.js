@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: false,
-  images: { unoptimized: true },
-  webpack: (config) => {
-    config.resolve.alias.canvas = false;
-    return config;
-  }
+  swcMinify: true,
+  images: { unoptimized: true }
 }
 
 module.exports = nextConfig
