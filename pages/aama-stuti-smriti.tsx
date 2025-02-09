@@ -2,16 +2,15 @@ import React from "react"
 import type { NextPage } from "next"
 import Head from "next/head"
 
-import PdfViewer from '../components/PdfViewer';
 const AamaPage: NextPage = () => {
   return (
     <div className="pt-16">
       <Head>
-        <title>इतिहास - पौडेल परिवार</title>
+        <title> आमा स्तुति स्मृति  - पौडेल परिवार</title>
       </Head>
 
-      <div className="container">
-        <PdfViewer fileUrl="/aama-stuti-smriti.pdf" />
+      <div className="container h-screen">
+        <iframe src="https://drive.google.com/file/d/13Khj7WDT34f8kj6WcXNbCZv2rHdR8jmh/preview" width="100%" height="100%" allow="autoplay"></iframe>
       </div>
     </div>
   )
