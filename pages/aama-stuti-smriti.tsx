@@ -10,7 +10,7 @@ const AamaPage: NextPage = () => {
       </Head>
 
       <div className="container h-screen">
-        <iframe src="https://drive.google.com/file/d/13Khj7WDT34f8kj6WcXNbCZv2rHdR8jmh/preview" width="100%" height="100%" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1w3GgpeyLZzejkTd-5vib5ADFgC2QUAiB/preview" width="100%" height="100%" allow="autoplay"></iframe>
       </div>
     </div>
   )
