@@ -4,7 +4,7 @@ import Head from "next/head"
 
 const AamaPage: NextPage = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-0">
       <Head>
         <title> आमा स्तुति स्मृति  - पौडेल परिवार</title>
       </Head>
