@@ -912,14 +912,23 @@
                                                                 },
                                                                 {
                                                                     "self": {
-                                                                        "id": "bibhuti-poudel",
+                                                                        "id": "`bibhuti-poudel",
                                                                         "name": "विभूति पौडेल",
                                                                         "dob": "1997-08-07",
                                                                         "dod": null,
                                                                         "gender": 0,
                                                                         "bio": "<b> Academic </b>: Masters in Computer Science <br/> <b> Profession </b>: CTO at TheValueCrew<br/>   <b>Address </b>: Kathmandu, Nepal    <br/><br/>  I am a software developer from Kathmandu. I believe building successful software requires not only tech skills but also positive emotions & empathy. I spend my free time on open source, reading & cycling."
                                                                     },
-                                                                    "spouse": []
+                                                                    "spouse": [
+                                                                        {
+                                                                            "id": "samru-adhikari",
+                                                                            "name": "संरक्षा अधिकारी",
+                                                                            "dob": "1999-10-23",
+                                                                            "dod": null,
+                                                                            "gender": 0,
+                                                                            "bio": "<b>Education</b>: Masters in Business Studies<br> <b>Profession</b> : Accountant <br><br>."
+                                                                        }
+                                                                    ]
                                                                 }
                                                             ]
                                                         },
