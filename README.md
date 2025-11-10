@@ -10,9 +10,7 @@ It is a non-profit, open source project. Anyone from Poudel family or beyond can
 
 **Bibhuti Poudel** : Developer & maintainer
 
-**Biranchi Poudel** : Researcher & Content writer
-
-**Dikshyant Poudel** : Digital assets developer
+**Dikshyant Poudel** : Researcher, Contentwriter, UI/UX Designer, Asset Developer
 
     Finance: The project is hosted for free on Cloudflare Pages. Expense for the sub-domain is covered by Bibhuti Poudel. Future expenses will also be handled by team members.
 
