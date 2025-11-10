@@ -25,9 +25,7 @@ const ContributePage: NextPage = () => {
         <p className="text-xl mb-4">
           Bibhuti Poudel : Developer &amp; maintainer
           <br />
-          Biranchi Poudel : Researcher &amp; Content writer
-          <br />
-          Dikshyant Poudel : Digital assets developer
+          Dikshyant Poudel : Reseracher, Content writer, UI/UX Designer, Asset Developer
         </p>
 
         <div className="bg-blue-50 text-black w-full rounded p-4 font-Nunito">
